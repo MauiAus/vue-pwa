@@ -5,20 +5,17 @@
             <div id="backpack">
                 Backpack
             </div>
-            <a id="link" href="#">Home</a>
-            <a id="link" href="#">Library</a>
-            <a id="link" href="#">Create Study Set</a>
-            <a id="link" href="#">Settings</a>
+            <router-link id="link" to="/home">Home</router-link>
+            <router-link id="link" to="/library">Library</router-link>
+            <router-link id="link" to="/create">Create Study Set</router-link>
+            <router-link id="link" to="/settings">Settings</router-link>
             <a id="logout" href="#">
                 Logout
             </a>
         </div>
         <!-- Main Content -->
         <div id="mid">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <router-view />
         </div>
         <!-- Right Sidebar -->
         <div id="right">
