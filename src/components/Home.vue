@@ -8,6 +8,14 @@
                 <img src="../assets/img/Welcome.png" />
             </div>
         </div>
+        <div class="classes">
+            <div class="class" id="algebra">
+            </div>
+            <div class="class" id="grammar">
+            </div>
+            <div class="class" id="biology">
+            </div>
+        </div>
     </div>
 </template>
 <script>
@@ -51,6 +59,24 @@ export default {
             bottom: 0;
         }
     }
+}
+
+.classes {
+    // calculate space between cards according to their width
+    $card-width: 30%;
+    $card-spacing: (100% - ($card_width * 3)) / 6;
+
+    .class {
+        display: inline-block;
+        width: 30%;
+        margin: $card-spacing;
+        min-height: 1vh * 55;
+        border-radius: 15px;
+    }
+
+    #algebra { background-color: #f47c61; }
+    #grammar { background-color: #3b72c4; }
+    #biology { background-color: #fdc648; }
 }
 
 </style>
