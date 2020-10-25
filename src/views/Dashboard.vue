@@ -99,6 +99,7 @@ export default {
     margin: 0% 20%;
     width: 60%;
     height: 100%;
+    min-height: 720px;
     background-color: #eef0ef;
 }
 
