@@ -18,20 +18,13 @@ const routes = [
         path: '',
         component: () => import('@/components/Home.vue'),
         meta: { title: 'Home' }
-      }
+      },
+      {
+        path: 'profile',
+        component: () => import('@/components/Profile.vue'),
+        meta: { title: 'Home' }
+      },      
     ]
-  },
-  {
-    path: '/login',
-    name: 'Login',
-    component: () => import('@/views/Login.vue'),
-    meta: { title: 'Login' }
-  },
-  {
-    path: '/signup',
-    name: 'Signup',
-    component: () => import('@/views/Signup.vue'),
-    meta: { title: 'Signup' }
   }
 ]
 
