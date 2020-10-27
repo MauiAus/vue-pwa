@@ -76,7 +76,7 @@ export default {
 <style lang="scss" scoped>
 /* Parent */
 .dashboard {
-    min-height: 720px;
+    min-height: 100vh;
     position: relative;
 }
 
@@ -140,8 +140,7 @@ export default {
 #mid {
     margin: 0% 20%;
     width: 60%;
-    height: 100%;
-    min-height: 720px;
+    min-height: 100vh;
     background-color: #eef0ef;
 }
 
