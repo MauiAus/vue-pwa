@@ -5,7 +5,7 @@
                 <p>Welcome Back Juan!</p>
             </div>
             <div id="right">
-                <img id="profileDash" src="../assets/img/Welcome.png" />
+                <img src="../assets/img/Welcome.png" />
             </div>
         </div>
         <div class="classes">
