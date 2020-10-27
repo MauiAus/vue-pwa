@@ -203,6 +203,9 @@ export default {
         li{
             padding-left: 5%;
             display:flex;
+            &:hover {
+                background-color: #eef0ef;
+            }
         }
         i{
             float:left;
