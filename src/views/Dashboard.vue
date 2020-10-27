@@ -40,6 +40,18 @@
                     <p id="bio">{{status}}</p>
                 </div>
             </div>
+            <div id="reminderView">
+                <p>Reminders</p><i class="far fa-bell"></i>
+            </div>
+            <div id="notificationView">
+                <ul>
+                    <li v-for="reminder in reminders" :key="reminder.index">
+                    <i class="far fa-envelope"></i>
+                    <p id="name">{{reminder.course}} - {{reminder.notification}}</p>
+                    <p id="date">{{reminder.date}}</p>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </template>
@@ -50,6 +62,11 @@ export default {
         return{
             name:"Juan Dela Cruz",
             status:"Student",
+            reminders:[
+              {course:"Biology", notification:"Send homework", date:"28 Dec 2020, Friday"},
+              {course:"Algebra", notification:"Send homework", date:"28 Dec 2020, Friday"},
+              {course:"Grammar", notification:"Send homework", date:"28 Dec 2020, Friday"},
+            ],
         }
     }
 }
@@ -158,6 +175,41 @@ export default {
             color: #a5a5a5;
         }
 
+    }
+
+    #reminderView{
+        p{
+            padding-left: 10%;
+            float:left;
+        }
+        i{
+            float:right;
+            padding-right: 10%;
+            padding-top: 10%;
+        }
+    }
+
+    #notificationView{
+        float:left;
+        padding-top:2%;
+
+        ul{
+            list-style: none;
+            padding: 0;
+        }
+        li{
+            padding-left: 1.3em;
+        }
+        i{
+            float:left;
+            background-color: #b9e8d4;
+            font-size: 200%;
+            padding: 5%;
+            border-radius: 10%;
+        }
+        #name{
+            width: 100%;
+        }
     }
 }
 
