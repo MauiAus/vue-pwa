@@ -2,7 +2,7 @@
     <div class="home">
         <div id="welcome-box">
             <div id="left">
-                <p>Welcome Back Juan!</p>
+                <p>Welcome Back Juan</p>
             </div>
             <div id="right">
                 <img src="../assets/img/Welcome.png" />
