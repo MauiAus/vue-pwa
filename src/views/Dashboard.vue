@@ -23,9 +23,9 @@
         <!-- Right Sidebar -->
         <div id="right">
             <div id="profileView">
-                <router-link to="/profile"><img id="profileLink" src="../assets/img/Profpic.jpg" /></router-link>
-                <router-link id="name" to="/profile"><p>Joshua Ron Garcia</p></router-link>
                 <div id="profileStats">
+                <router-link to="/profile"><img id="profileLink" src="../assets/img/Profpic.jpg" /></router-link>
+                <router-link id="name" to="/profile"><p>{{name}}</p></router-link>
                     <!--
                     TODO: I recommend if certain details can be simplified with icons instead.
 
@@ -37,7 +37,7 @@
                         <li id="reminder">Reminders</li>  
                     </ul>
                     -->
-                    <p id="bio">I am a Mapuan</p>
+                    <p id="bio">{{status}}</p>
                 </div>
             </div>
         </div>
@@ -45,7 +45,13 @@
 </template>
 <script>
 export default {
-    name: 'Dashboard'
+    name: 'Dashboard',
+    data(){
+        return{
+            name:"Juan Dela Cruz",
+            status:"Student",
+        }
+    }
 }
 </script>
 <style lang="scss" scoped>
@@ -125,24 +131,31 @@ export default {
     @extend %sidebar;
     width: 20%;
     right: 0;
-    background-color: #fbf9fa;
+    background: #fbf9fa;
+    border-radius: 10px;
+
 
     #profileView {
-        margin-top: 4vh;
+        background-color: #eef0ef;
+        display: flex;
+        margin: 5% 10% 5%;
+        border-radius: 5%;
 
         #profileLink {
-            display: block;
-            margin: auto;
-            width: 12vw;
-            border-radius: 50%;
-            
+            float: left;
+            max-width: 35%;
+            padding: 5%;
+            border-radius: 30%;
         }
         #name {
-            text-align: center;
+            text-align: left;
+            color: #111;
+            font-weight: bold;
         }
 
         #profileStats {
-            text-align: center;
+            text-align: left;
+            color: #a5a5a5;
         }
 
     }
