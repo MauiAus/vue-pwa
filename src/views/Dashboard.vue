@@ -7,8 +7,9 @@
             </div>
             <router-link id="link" to="/home">Home</router-link>
             <router-link id="link" to="/library">Library</router-link>
-            <router-link id="link" to="/create">Create Study Set</router-link>
-            <router-link id="link" to="/settings">Settings</router-link>
+            <router-link id="link" to="/createStudyset">Create Study Set</router-link>
+            <router-link id="link" to="/studySet">Study Set</router-link>
+            <router-link id="link" to="/stats">Statistics</router-link>
             <a id="logout" href="#">
                 Logout
             </a>
@@ -134,26 +135,17 @@ export default {
             margin: auto;
             width: 12vw;
             border-radius: 50%;
+            
         }
-
         #name {
-            display: block;
             text-align: center;
-            font-size: 24px;
-            color: rgb(0, 0, 0);
-
-            p { margin-bottom: 0; }
         }
 
         #profileStats {
-
-            #bio {
-                display: block;
-                text-align: center;
-                color: rgb(131, 131, 131);
-            }
-
+            text-align: center;
         }
+
     }
 }
+
 </style>
