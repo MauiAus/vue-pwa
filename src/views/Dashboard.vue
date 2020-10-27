@@ -5,12 +5,12 @@
             <div id="backpack">
                 Backpack
             </div>
-            <router-link id="link" to="/home">Home</router-link>
-            <router-link id="link" to="/library">Library</router-link>
-            <router-link id="link" to="/createStudyset">Create Study Set</router-link>
-            <router-link id="link" to="/studySet">Study Set</router-link>
-            <router-link id="link" to="/stats">Statistics</router-link>
+            <router-link id="link" to="/home"><i class="fas fa-home"></i> Home</router-link>
+            <router-link id="link" to="/library"><i class="fas fa-book-open"></i> Library</router-link>
+            <router-link id="link" to="/createStudyset"><i class="far fa-edit"></i> Create Study Set</router-link>
+            <router-link id="link" to="/stats"><i class="fas fa-columns"></i> Statistics</router-link>
             <a id="logout" href="#">
+                <i class="fas fa-sign-out-alt"></i>
                 Logout
             </a>
         </div>
@@ -47,8 +47,10 @@
                 <ul>
                     <li v-for="reminder in reminders" :key="reminder.index">
                     <i class="far fa-envelope"></i>
-                    <p id="name">{{reminder.course}} - {{reminder.notification}}</p>
-                    <p id="date">{{reminder.date}}</p>
+                    <div id="contents"> 
+                        <p id="name">{{reminder.course}} - {{reminder.notification}}</p>
+                        <p id="date">{{reminder.date}}</p>
+                    </div>
                     </li>
                 </ul>
             </div>
@@ -192,23 +194,42 @@ export default {
     #notificationView{
         float:left;
         padding-top:2%;
+        width:100%;
+        overflow: auto;
 
         ul{
             list-style: none;
             padding: 0;
         }
         li{
-            padding-left: 1.3em;
+            padding-left: 5%;
+            display:flex;
         }
         i{
             float:left;
             background-color: #b9e8d4;
             font-size: 200%;
             padding: 5%;
+            margin-top: auto;
+            margin-right: 1.5%;
+            margin-left: 5%;
+            margin-bottom: auto;
             border-radius: 10%;
+            color: #fbf9fa;
         }
-        #name{
-            width: 100%;
+        #contents{
+            display:inline-block;
+            padding-left: 5%;
+            padding-right: 5%;
+            #name{
+                margin-top:10%;
+                font-size: 14px;
+                color: #848384;
+                font-weight: bold;
+            }
+            #date{
+                color: #a5a5a5;
+            }
         }
     }
 }
