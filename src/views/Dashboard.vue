@@ -5,12 +5,12 @@
             <div id="backpack">
                 Backpack
             </div>
-            <router-link id="link" to="/home">Home</router-link>
-            <router-link id="link" to="/library">Library</router-link>
-            <router-link id="link" to="/createStudyset">Create Study Set</router-link>
-            <router-link id="link" to="/studySet">Study Set</router-link>
-            <router-link id="link" to="/stats">Statistics</router-link>
+            <router-link id="link" to="/home"><i class="fas fa-home"></i> Home</router-link>
+            <router-link id="link" to="/library"><i class="fas fa-book-open"></i> Library</router-link>
+            <router-link id="link" to="/createStudyset"><i class="far fa-edit"></i> Create Study Set</router-link>
+            <router-link id="link" to="/stats"><i class="fas fa-columns"></i> Statistics</router-link>
             <a id="logout" href="#">
+                <i class="fas fa-sign-out-alt"></i>
                 Logout
             </a>
         </div>
@@ -23,9 +23,9 @@
         <!-- Right Sidebar -->
         <div id="right">
             <div id="profileView">
-                <router-link to="/profile"><img id="profileLink" src="../assets/img/Profpic.jpg" /></router-link>
-                <router-link id="name" to="/profile"><p>Joshua Ron Garcia</p></router-link>
                 <div id="profileStats">
+                <router-link to="/profile"><img id="profileLink" src="../assets/img/Profpic.jpg" /></router-link>
+                <router-link id="name" to="/profile"><p>{{name}}</p></router-link>
                     <!--
                     TODO: I recommend if certain details can be simplified with icons instead.
 
@@ -37,15 +37,40 @@
                         <li id="reminder">Reminders</li>  
                     </ul>
                     -->
-                    <p id="bio">I am a Mapuan</p>
+                    <p id="bio">{{status}}</p>
                 </div>
+            </div>
+            <div id="reminderView">
+                <p>Reminders</p><i class="far fa-bell"></i>
+            </div>
+            <div id="notificationView">
+                <ul>
+                    <li v-for="reminder in reminders" :key="reminder.index">
+                    <i class="far fa-envelope"></i>
+                    <div id="contents"> 
+                        <p id="name">{{reminder.course}} - {{reminder.notification}}</p>
+                        <p id="date">{{reminder.date}}</p>
+                    </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
 </template>
 <script>
 export default {
-    name: 'Dashboard'
+    name: 'Dashboard',
+    data(){
+        return{
+            name:"Juan Dela Cruz",
+            status:"Student",
+            reminders:[
+              {course:"Biology", notification:"Send homework", date:"28 Dec 2020, Friday"},
+              {course:"Algebra", notification:"Send homework", date:"28 Dec 2020, Friday"},
+              {course:"Grammar", notification:"Send homework", date:"28 Dec 2020, Friday"},
+            ],
+        }
+    }
 }
 </script>
 <style lang="scss" scoped>
@@ -124,26 +149,90 @@ export default {
     @extend %sidebar;
     width: 20%;
     right: 0;
-    background-color: #fbf9fa;
+    background: #fbf9fa;
+    border-radius: 10px;
+
 
     #profileView {
-        margin-top: 4vh;
+        background-color: #eef0ef;
+        display: flex;
+        margin: 5% 10% 5%;
+        border-radius: 5%;
 
         #profileLink {
-            display: block;
-            margin: auto;
-            width: 12vw;
-            border-radius: 50%;
-            
+            float: left;
+            max-width: 35%;
+            padding: 5%;
+            border-radius: 30%;
         }
         #name {
-            text-align: center;
+            text-align: left;
+            color: #111;
+            font-weight: bold;
         }
 
         #profileStats {
-            text-align: center;
+            text-align: left;
+            color: #a5a5a5;
         }
 
+    }
+
+    #reminderView{
+        p{
+            padding-left: 10%;
+            float:left;
+        }
+        i{
+            float:right;
+            padding-right: 10%;
+            padding-top: 10%;
+        }
+    }
+
+    #notificationView{
+        float:left;
+        padding-top:2%;
+        width:100%;
+        overflow: auto;
+
+        ul{
+            list-style: none;
+            padding: 0;
+        }
+        li{
+            padding-left: 5%;
+            display:flex;
+            &:hover {
+                background-color: #eef0ef;
+            }
+        }
+        i{
+            float:left;
+            background-color: #b9e8d4;
+            font-size: 200%;
+            padding: 5%;
+            margin-top: auto;
+            margin-right: 1.5%;
+            margin-left: 5%;
+            margin-bottom: auto;
+            border-radius: 10%;
+            color: #fbf9fa;
+        }
+        #contents{
+            display:inline-block;
+            padding-left: 5%;
+            padding-right: 5%;
+            #name{
+                margin-top:10%;
+                font-size: 14px;
+                color: #848384;
+                font-weight: bold;
+            }
+            #date{
+                color: #a5a5a5;
+            }
+        }
     }
 }
 
