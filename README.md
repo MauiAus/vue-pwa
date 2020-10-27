@@ -23,6 +23,8 @@ npm run serve
 
 Refer to [FontAwesome](https://fontawesome.com/icons) for the Icons. Since we are not using [FontAwesome Pro](https://fontawesome.com/pro), we can't use FontAwesome's **Pro Solid**, **Regular**, **Duotone**, and **Light** icons.
 
+You can also check out [vue-fontawesome](https://github.com/FortAwesome/vue-fontawesome).
+
 ### Solid Icons
 
 Let's say you want to add an icon from [FontAwesome](https://fontawesome.com/icons) to the App called `credit-card` and it is a Solid icon.
