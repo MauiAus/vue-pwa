@@ -13,13 +13,23 @@
                 Logout
             </a>
         </div>
+
         <!-- Main Content -->
         <div id="mid">
             <router-view />
         </div>
+
         <!-- Right Sidebar -->
         <div id="right">
-            Right
+            <router-link to="/profile"><img id="profileLink" src="../assets/img/Profpic.jpg" /> </router-link>
+            <div id="profileStats">
+                <ul>
+                    <li><router-link id="name" to="/profile">Joshua Ron Garcia</router-link></li>
+                    <li id="bio">Biography: <p>I am a Mapuan</p> </li>
+                    <li>Status: Single</li>
+                    <li id="reminder">Reminders</li>  
+                </ul>   
+            </div>
         </div>
     </div>
 </template>
@@ -106,5 +116,45 @@ export default {
     width: 20%;
     right: 0;
     background-color: #fbf9fa;
+
+    #profileLink {
+        width: 200px;
+        height: 200px;
+        max-width: 100%;
+        max-height: 100%;
+        position: absolute;
+        border-radius: 100px;
+        margin: 15% 30%;
+    }
+
+    #profileStats {
+        margin: 80% 10%;
+        display: block;
+        color: black;
+        text-align: center;  
+        position: relative;
+        font-size: 20px;
+    }
+
+    ul {
+        list-style-type: none;
+        
+        li {
+            margin: 10%;
+            p {
+                font-size: 15px;
+            }
+        }
+
+        #bio {
+            padding-bottom: 30%;
+        }
+
+       #name {
+            padding: 20px
+        }
+    }
+
+
 }
 </style>

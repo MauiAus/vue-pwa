@@ -5,7 +5,7 @@
                 <p>Welcome Back Juan!</p>
             </div>
             <div id="right">
-                <img src="../assets/img/Welcome.png" />
+                <img id="profileDash" src="../assets/img/Welcome.png" />
             </div>
         </div>
         <div class="classes">
@@ -18,11 +18,13 @@
         </div>
     </div>
 </template>
+
 <script>
 export default {
     name: 'Home'
 }
 </script>
+
 <style lang="scss" scoped>
 
 .home {
@@ -54,6 +56,7 @@ export default {
 
         img {
             right: 20%;
+            max-width: 100%;
             max-height: 100%;
             position: absolute;
             bottom: 0;
