@@ -21,14 +21,23 @@
 
         <!-- Right Sidebar -->
         <div id="right">
-            <router-link to="/profile"><img id="profileLink" src="../assets/img/Profpic.jpg" /> </router-link>
-            <div id="profileStats">
-                <ul>
-                    <li><router-link id="name" to="/profile">Joshua Ron Garcia</router-link></li>
-                    <li id="bio">Biography: <p>I am a Mapuan</p> </li>
-                    <li>Status: Single</li>
-                    <li id="reminder">Reminders</li>  
-                </ul>   
+            <div id="profileView">
+                <router-link to="/profile"><img id="profileLink" src="../assets/img/Profpic.jpg" /></router-link>
+                <router-link id="name" to="/profile"><p>Joshua Ron Garcia</p></router-link>
+                <div id="profileStats">
+                    <!--
+                    TODO: I recommend if certain details can be simplified with icons instead.
+
+                    This is a snippet of PR #4.
+                    <ul>
+                        <li><router-link id="name" to="/profile">Joshua Ron Garcia</router-link></li>
+                        <li id="bio">Biography: <p>I am a Mapuan</p> </li>
+                        <li>Status: Single</li>
+                        <li id="reminder">Reminders</li>  
+                    </ul>
+                    -->
+                    <p id="bio">I am a Mapuan</p>
+                </div>
             </div>
         </div>
     </div>
@@ -117,44 +126,34 @@ export default {
     right: 0;
     background-color: #fbf9fa;
 
-    #profileLink {
-        width: 200px;
-        height: 200px;
-        max-width: 100%;
-        max-height: 100%;
-        position: absolute;
-        border-radius: 100px;
-        margin: 15% 30%;
-    }
+    #profileView {
+        margin-top: 4vh;
 
-    #profileStats {
-        margin: 80% 10%;
-        display: block;
-        color: black;
-        text-align: center;  
-        position: relative;
-        font-size: 20px;
-    }
+        #profileLink {
+            display: block;
+            margin: auto;
+            width: 12vw;
+            border-radius: 50%;
+        }
 
-    ul {
-        list-style-type: none;
-        
-        li {
-            margin: 10%;
-            p {
-                font-size: 15px;
+        #name {
+            display: block;
+            text-align: center;
+            font-size: 24px;
+            color: rgb(0, 0, 0);
+
+            p { margin-bottom: 0; }
+        }
+
+        #profileStats {
+
+            #bio {
+                display: block;
+                text-align: center;
+                color: rgb(131, 131, 131);
             }
-        }
 
-        #bio {
-            padding-bottom: 30%;
-        }
-
-       #name {
-            padding: 20px
         }
     }
-
-
 }
 </style>
