@@ -182,6 +182,7 @@ export default {
         p{
             padding-left: 10%;
             float:left;
+            margin-top:9%;
         }
         i{
             float:right;
