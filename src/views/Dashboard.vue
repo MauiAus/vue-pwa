@@ -26,17 +26,6 @@
                 <div id="profileStats">
                 <router-link to="/profile"><img id="profileLink" src="../assets/img/Profpic.jpg" /></router-link>
                 <router-link id="name" to="/profile"><p>{{name}}</p></router-link>
-                    <!--
-                    TODO: I recommend if certain details can be simplified with icons instead.
-
-                    This is a snippet of PR #4.
-                    <ul>
-                        <li><router-link id="name" to="/profile">Joshua Ron Garcia</router-link></li>
-                        <li id="bio">Biography: <p>I am a Mapuan</p> </li>
-                        <li>Status: Single</li>
-                        <li id="reminder">Reminders</li>  
-                    </ul>
-                    -->
                     <p id="bio">{{status}}</p>
                 </div>
             </div>
@@ -180,14 +169,13 @@ export default {
 
     #reminderView{
         p{
-            padding-left: 10%;
             float:left;
             margin-top:9%;
+            padding-left: 10%;
         }
         i{
             float:right;
-            padding-right: 10%;
-            padding-top: 10%;
+            padding: 10% 10% 0 0;
         }
     }
 
@@ -213,17 +201,13 @@ export default {
             background-color: #b9e8d4;
             font-size: 200%;
             padding: 5%;
-            margin-top: auto;
-            margin-right: 1.5%;
-            margin-left: 1.5%;
-            margin-bottom: auto;
+            margin: auto 1.5%;
             border-radius: 10%;
             color: #fbf9fa;
         }
         #contents{
             display:inline-block;
-            padding-left: 5%;
-            padding-right: 5%;
+            padding: auto 5%;
             #name{
                 margin-top:10%;
                 font-size: 14px;
