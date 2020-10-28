@@ -34,13 +34,43 @@
         </div>
 
         <!--Classes cards-->
-        <div class = "classes">
-            <div class ="A1">
-                <div class = "upper-texts-1">
-                    <div class = "section-1">
+        <div class="cards">
+            <div class="card" id="math">
+                <div id="upper">
+                    <div id="section"><h2>A2</h2></div>
+                    <div id="course">
+                        <a>MATH-4</a>
+                        <a>Algebra</a>
+                    </div>
+                </div>
+                <p>You have accomplished 80% of this module. Keep up the good work!</p>
+            </div>
+            <div class="card" id="grammar">
+                <div id="upper">
+                    <div id="section"><h2>A2</h2></div>
+                    <div id="course">
+                        <a>MATH-4</a>
+                        <a>Algebra</a>
+                    </div>
+                </div>
+                <p>You have accomplished 80% of this module. Keep up the good work!</p>
+            </div>
+            <div class="card" id="biology">
+                <div id="upper">
+                    <div id="section"><h2>A2</h2></div>
+                    <div id="course">
+                        <a>MATH-4</a>
+                        <a>Algebra</a>
+                    </div>
+                </div>
+                <p>You have accomplished 80% of this module. Keep up the good work!</p>
+            </div>
+            <!--<div class ="A1">
+                <div class="upper-texts-1">
+                    <div class="section-1">
                         <h2>A2</h2>
                     </div>
-                    <div class = "course-1">
+                    <div class="course-1">
                         <a>MATH-4</a>
                         <a>Algebra</a>
                     </div>
@@ -70,7 +100,7 @@
                     </div>
                 </div>
                 <p>You have accomplished 27% of this module. Continue learning!</p>
-            </div>
+            </div>-->
         </div>
 
         <!--Your materials and more-->
@@ -85,35 +115,29 @@
         </div>
 
         <!--Material cards-->
-        <div class = "materials">
-            <div class ="B1">
-                <div class = "upper-texts-4">
-                    <div class = "section-4">
-                        <h2>MR</h2>
-                    </div>
-                    <div class = "course-4">
+        <div class="cards">
+            <div class ="card" id="math-4-reviewer">
+                <div id="upper">
+                    <div id="section"><h2>MR</h2></div>
+                    <div id="course">
                         <a>MATH-4</a>
                         <a>Reviewer</a>
                     </div>
                 </div>
             </div>
-            <div class ="B2">
-                <div class = "upper-texts-5">
-                    <div class = "section-5">
-                        <h2>SR</h2>
-                    </div>
-                    <div class = "course-5">
+            <div class ="card" id="sci-3-reviewer">
+                <div id="upper">
+                    <div id="section"><h2>SR</h2></div>
+                    <div id="course">
                         <a>SCI-3</a>
                         <a>Reviewer</a>
                     </div>
                 </div>
             </div>
-            <div class ="B3">
-                 <div class = "upper-texts-6">
-                    <div class = "section-6">
-                        <h2>EA</h2>
-                    </div>
-                    <div class = "course-6">
+            <div class="card" id="eng-5-assessment">
+                <div id="upper">
+                    <div id="section"><h2>EA</h2></div>
+                    <div id="course">
                         <a>ENG-5</a>
                         <a>Assessment</a>
                     </div>
@@ -239,154 +263,126 @@ export default {
     }
 }
 
-/*Class cards style*/
-.classes{
-    display: flex;
-    margin-top: 1%;
-    margin-left: 20px;
-    margin-right: 20px;
+/* Card Style: Class cards and Material cards */
+.cards {
+    // calculate space between cards according to width
     $card-width: 30%;
-    $card-spacing: (100% - ($card_width * 3)) / 6;
-}
+    $card-spacing: (100% - ($card-width * 3)) / 6;
 
-.A1 {
-    width:35%;
-    min-height: 1vh * 55;
-    border-radius: 15px;
-    background: #f47c61;
-    margin-right: 20px;
+    .card {
+        display: inline-block;
+        margin: $card-spacing;
+        width: 30%;
+        min-height: 1vh * 55;
+        border-radius: 15px;
 
-    .upper-texts-1 {
-        display: flex;
-        .section-1 {
-            margin-top: 10%;
-            margin-left: 10%;
-            margin-right: 5%;
-            width: 70px;
-            height: 70px;
-            border-radius: 10px;
-            background: #f28d77;
-            h2 {
-                text-align: center;
-                font-weight: 500;
-                color: white;
+        #upper {
+            display: flex;
+
+            #section {
+                margin: 15% 5% 0 10%;
+                width: 70px;
+                height: 70px;
+                border-radius: 10px;
+
+                h2 {
+                    text-align: center;
+                    font-weight: 500;
+                    color: white;
+                }
+            }
+
+            #course {
+                margin-top: 15%;
+
+                a {
+                    display: block;
+                    color: white;
+                }
             }
         }
-        .course-1 {
-            margin-top: 15%;
-            a {
-                display: block;
-                color: white;  
-            }
-        }
-    }
 
-    p {
-        color: white;
-        margin-top: 200px;
-        margin-left: 10%;
-        margin-right: 10%;
-        text-align: justify;
-        text-justify: inter-word;
-    }
-}
-
-.A1:hover {
-    background: #fc7d60;
-    transition: 0.2s;
-}
-
-.A2 {
-    width:35%;
-    min-height: 1vh * 55;
-    border-radius: 15px;
-    background: #3b72c4;
-    margin-right: 20px;
-
-    .upper-texts-2 {
-        display: flex;
-        .section-2 {
-            margin-top: 10%;
-            margin-left: 10%;
-            margin-right: 5%;
-            width: 70px;
-            height: 70px;
-            border-radius: 10px;
-            background: #4f84d4;
-            h2 {
-                text-align: center;
-                font-weight: 500;
-                color: white;
-            }
-        }
-        .course-2 {
-            margin-top: 15%;
-            a {
-                display: block;
-                color: white;  
-            }
+        p {
+            color: white;
+            margin: 200px 10% 0 10%;
+            text-align: justify;
+            text-justify: inter-word;
         }
     }
 
-    p {
-        color: white;
-        margin-top: 200px;
-        margin-left: 10%;
-        margin-right: 10%;
-        text-align: justify;
-        text-justify: inter-word;
+    &:hover {
+        transition: 0.2s;
     }
-}
 
-.A2:hover {
-    background: #3f79d0;
-    transition: 0.2s;
-}
+    /*
+        This segment can still be refactored.
+        Try playing with CSS filters, then use Sass to simplify it.
+    */
+    #math { 
+        background: #f47c61;
 
-.A3 {
-    width:35%;
-    min-height: 1vh * 55;
-    border-radius: 15px;
-    background: #fdc648;
-
-    .upper-texts-3 {
-        display: flex;
-        .section-3 {
-            margin-top: 10%;
-            margin-left: 10%;
-            margin-right: 5%;
-            width: 70px;
-            height: 70px;
-            border-radius: 10px;
-            background: #fad06c;
-            h2 {
-                text-align: center;
-                font-weight: 500;
-                color: white;
-            }
-        }
-        .course-3 {
-            margin-top: 15%;
-            a {
-                display: block;
-                color: white;  
-            }
+        #section { background: #f28d77 }
+        
+        &:hover {
+            transition: #fc7d60;
+            transition: 0.2s;
         }
     }
 
-    p {
-        color: white;
-        margin-top: 200px;
-        margin-left: 10%;
-        margin-right: 10%;
-        text-align: justify;
-        text-justify: inter-word;
-    }
-}
+    #grammar { 
+        background: #3b72c4;
 
-.A3:hover {
-    background: #fece61;
-    transition: 0.2s;
+        #section { background: #4f84d4 }
+
+        &:hover {
+            background: #3f79d0;
+            transition: 0.2s;
+        }
+    }
+
+    #biology { 
+        background: #fdc648;
+
+        #section { background: #fad06c }
+
+        &:hover {
+            background: #fece61;
+            transition: 0.2s;
+        }
+    }
+
+    #math-4-reviewer {
+        background: #53bd5b;
+
+        #section { background: #62d367 }
+
+        &:hover {
+            background: #5aca62;
+            transition: 0.2s;
+        }
+    }
+
+    #sci-3-reviewer {
+        background: #ca5254;
+
+        #section { background: #e06061 }
+
+        &:hover {
+            background: #d7595b;
+            transition: 0.2s;
+        }
+    }
+
+    #eng-5-assessment {
+        background: #af52c6;
+
+        #section { background: #c35ddc }
+
+        &:hover {
+            background: #b95ed0;
+            transition: 0.2s;
+        }
+    }
 }
 
 /*Your materials and more styles*/
@@ -409,129 +405,6 @@ export default {
             color: #52c3a5;
         }
     }
-}
-
-/*Materials cards style*/
-.materials{
-    display: flex;
-    margin-top: 1%;
-    margin-left: 20px;
-    margin-right: 20px;
-    $card-width: 30%;
-    $card-spacing: (100% - ($card_width * 3)) / 6;
-}
-
-.B1 {
-    width:35%;
-    min-height: 1vh * 55;
-    border-radius: 15px;
-    background: #53bd5b;
-    margin-right: 20px;
-
-    .upper-texts-4 {
-        display: flex;
-        .section-4 {
-            margin-top: 10%;
-            margin-left: 10%;
-            margin-right: 5%;
-            width: 70px;
-            height: 70px;
-            border-radius: 10px;
-            background: #62d367;
-            h2 {
-                text-align: center;
-                font-weight: 500;
-                color: white;
-            }
-        }
-        .course-4 {
-            margin-top: 15%;
-            a {
-                display: block;
-                color: white;  
-            }
-        }
-    }
-}
-
-.B1:hover {
-    background: #5aca62;
-    transition: 0.2s;
-}
-
-.B2 {
-    width:35%;
-    min-height: 1vh * 55;
-    border-radius: 15px;
-    background: #ca5254;
-    margin-right: 20px;
-
-    .upper-texts-5 {
-        display: flex;
-        .section-5 {
-            margin-top: 10%;
-            margin-left: 10%;
-            margin-right: 5%;
-            width: 70px;
-            height: 70px;
-            border-radius: 10px;
-            background: #e06061;
-            h2 {
-                text-align: center;
-                font-weight: 500;
-                color: white;
-            }
-        }
-        .course-5 {
-            margin-top: 15%;
-            a {
-                display: block;
-                color: white;  
-            }
-        }
-    }
-}
-
-.B2:hover {
-    background: #d7595b;
-    transition: 0.2s;
-}
-
-.B3 {
-    width:35%;
-    min-height: 1vh * 55;
-    border-radius: 15px;
-    background: #af52c6;
-
-    .upper-texts-6 {
-        display: flex;
-        .section-6 {
-            margin-top: 10%;
-            margin-left: 10%;
-            margin-right: 5%;
-            width: 70px;
-            height: 70px;
-            border-radius: 10px;
-            background: #c35ddc;
-            h2 {
-                text-align: center;
-                font-weight: 500;
-                color: white;
-            }
-        }
-        .course-6 {
-            margin-top: 15%;
-            a {
-                display: block;
-                color: white;  
-            }
-        }
-    }
-}
-
-.B3:hover {
-    background: #b95ed0;
-    transition: 0.2s;
 }
 
 </style>
