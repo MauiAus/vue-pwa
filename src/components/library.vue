@@ -34,6 +34,7 @@
                         <p>PLUS</p>
                     </div>
                 </div>
+                <!--this is a card-->
                 <div class="card">
                     <div id="courseAcro">
                         <p>CH1</p>
@@ -46,6 +47,7 @@
                         <p>PLUS</p>
                     </div>
                 </div>
+                <!--this is a card-->
                 <div class="card">
                     <div id="courseAcro">
                         <p>CH1</p>
@@ -109,6 +111,7 @@ export default {
     }
 }
 
+// this is the css of a single row of cards
 .shelf {
     width: 100%;
     max-height: 100%;
