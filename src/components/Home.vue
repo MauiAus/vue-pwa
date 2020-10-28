@@ -27,7 +27,7 @@
             <div id="your-classes">
                 Your Classes
             </div>
-            <a class="more-classes-btn" href="#">
+            <a id="more-classes-btn" href="#">
                 More
                 <i class="fas fa-arrow-right"></i>
             </a>
@@ -78,7 +78,7 @@
             <div id="your-materials">
                 Your Materials
             </div>
-            <a class="more-materials-btn" href="#">
+            <a id="more-materials-btn" href="#">
                 More
                 <i class="fas fa-arrow-right"></i>
             </a>
@@ -221,16 +221,22 @@ export default {
 .more-classes {
     margin-top: 2%;
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     color: #404040;
-}
+    
+    #your-classes {
+        flex-grow: 6;
+    }
 
-.more-classes-btn{
-    color: #404040;
-    margin-left: 700px;
-}
+    #more-classes-btn {
+        justify-content: right;
+        color: #404040;
 
-.more-classes-btn:hover{
-    color: #52c3a5;
+        &:hover {
+            color: #52c3a5;        
+        }
+    }
 }
 
 /*Class cards style*/
@@ -387,16 +393,22 @@ export default {
 .more-materials {
     margin-top: 2%;
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     color: #404040;
-}
 
-.more-materials-btn{
-    color: #404040;
-    margin-left: 686px;
-}
+    #your-materials {
+        flex-grow: 6;
+    }
 
-.more-materials-btn:hover{
-    color: #52c3a5;
+    #more-materials-btn {
+        justify-content: right;
+        color: #404040;
+
+        &:hover {
+            color: #52c3a5;
+        }
+    }
 }
 
 /*Materials cards style*/
