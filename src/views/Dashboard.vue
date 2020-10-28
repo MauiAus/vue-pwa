@@ -182,6 +182,7 @@ export default {
         p{
             padding-left: 10%;
             float:left;
+            margin-top:9%;
         }
         i{
             float:right;
@@ -214,7 +215,7 @@ export default {
             padding: 5%;
             margin-top: auto;
             margin-right: 1.5%;
-            margin-left: 5%;
+            margin-left: 1.5%;
             margin-bottom: auto;
             border-radius: 10%;
             color: #fbf9fa;
