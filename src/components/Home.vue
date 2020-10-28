@@ -65,42 +65,6 @@
                 </div>
                 <p>You have accomplished 80% of this module. Keep up the good work!</p>
             </div>
-            <!--<div class ="A1">
-                <div class="upper-texts-1">
-                    <div class="section-1">
-                        <h2>A2</h2>
-                    </div>
-                    <div class="course-1">
-                        <a>MATH-4</a>
-                        <a>Algebra</a>
-                    </div>
-                </div>
-                <p>You have accomplished 80% of this module. Keep up the good work!</p>
-            </div>
-            <div class ="A2">
-                <div class = "upper-texts-2">
-                    <div class = "section-2">
-                        <h2>A2</h2>
-                    </div>
-                    <div class = "course-2">
-                        <a>ENG-3</a>
-                        <a>Grammar</a>
-                    </div>
-                </div>
-                <p>You have accomplished 50% of this module. Good job!</p>
-            </div>
-            <div class ="A3">
-                 <div class = "upper-texts-3">
-                    <div class = "section-3">
-                        <h2>A1</h2>
-                    </div>
-                    <div class = "course-3">
-                        <a>SCI-3</a>
-                        <a>Biology</a>
-                    </div>
-                </div>
-                <p>You have accomplished 27% of this module. Continue learning!</p>
-            </div>-->
         </div>
 
         <!--Your materials and more-->
