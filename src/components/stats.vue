@@ -1,4 +1,3 @@
-import VeLine from 'v-charts/lib/line.common'
 <template>
     <div class="tracker-title">
         <div id="tracker-box">
@@ -22,22 +21,18 @@ import VeLine from 'v-charts/lib/line.common'
 export default {
     name: 'stats',
     data() {
-        this.chartSettings = {
-            dimension: ['subject'],
-            metrics: ['Average Percentage of Scores']
+        return {
+            chartData: {
+                columns: ['subject', 'Average Percentage of Scores'],
+                rows: [
+                    {'subject': 'English 3', 'Average Percentage of Scores': 84 },
+                    {'subject': 'Algebra 2', 'Average Percentage of Scores': 79 },
+                    {'subject': 'Arts 1', 'Average Percentage of Scores': 87 },
+                    {'subject': 'Science 1', 'Average Percentage of Scores': 70 },
+                    {'subject': 'Geology 1', 'Average Percentage of Scores': 90 }
+                ]
+            }
         }
-    return {
-        chartData: {
-            columns: ['subject', 'Average Percentage of Scores'],
-            rows: [
-                {'subject': 'English 3', 'Average  Percentage of Scores': 84 },
-                {'subject': 'Algebra 2', 'Average  Percentage of Scores': 79 },
-                {'subject': 'Arts 1', 'Average  Percentage of Scores': 87 },
-                {'subject': 'Science 1', 'Average  Percentage of Scores': 70 },
-                {'subject': 'Geology 1', 'Average  Percentage of Scores': 90 }
-            ]
-        }
-    }
     }
 }
 </script>
