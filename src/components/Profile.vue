@@ -1,7 +1,108 @@
 <template>
     <div class="profile">
-        <div id="profilePic">
-            <img src="../assets/img/Profpic.jpg" /> 
+        <!-- Search bar-->
+        <div class="search-box">
+            <a class="search-btn" href="#">
+                <i class="fas fa-search fa-lg"></i>
+            </a>
+            <input class="search-txt" type="text" name="" placeholder="Search">
+            <a class="caret-down-btn" href="#">
+                <i class="fas fa-caret-down fa-lg"></i>
+            </a>
+        </div>
+        <!--Profile info-->
+        <div class="profile-info">
+            <div class = "left-pic">
+                <img src="../assets/img/Profpic.jpg" /> 
+            </div>
+            <div class = "right">
+                <h1>Juan Dela Cruz</h1>
+                <h2>@juandelacruz</h2>
+                <p> Hi! I'm a 3rd grader from section-A. I hope my study sets can help you! </p>
+                <a>34 following </a> 
+                <b>301 followers </b>
+            </div>
+        </div>
+        <!--Navigation-->
+        <div class = "navigation">
+            <div class = "nav-link">
+                <a href="#">Study Sets</a>
+            </div>
+            <div class = "nav-link">
+                <a href="#">Saved</a>
+            </div>
+        </div>
+        <!--Study set cards-->
+        <div class = "study-set-cards">
+            <div class = "card" id = "algebra">
+                <div id = "upper">
+                    <div id="course">
+                        <a>Algebra</a>
+                        <a>Chapter 1 - 2</a>
+                    </div>
+                    <div id="bookmark">
+                        <a href = "#"><i class="far fa-bookmark fa-2x"></i></a>
+                    </div>
+                </div>
+                <div id = "lower">
+                    <h2>@juandelacruz</h2>
+                    <p>This study set also contains answer keys from the previous exam. You're welcome!</p>
+                    <div id = "react-btns">
+                        <div id = "react">
+                            <a href="#">1.1k<i class="fas fa-heart"></i></a>
+                        </div>
+                        <div id = "react">
+                            <a href="#">87<i class="fas fa-comment"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "card" id = "biology">
+                <div id = "upper">
+                    <div id="course">
+                        <a>Algebra</a>
+                        <a>Chapter 1 - 2</a>
+                    </div>
+                    <div id="bookmark">
+                        <a href = "#"><i class="far fa-bookmark fa-2x"></i></a>
+                    </div>
+                </div>
+                <div id = "lower">
+                    <h2>@juandelacruz</h2>
+                    <p>This study set also contains answer keys from the previous exam. You're welcome!</p>
+                    <div id = "react-btns">
+                        <div id = "react">
+                            <a href="#">1.1k<i class="fas fa-heart"></i></a>
+                        </div>
+                        <div id = "react">
+                            <a href="#">87<i class="fas fa-comment"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "card" id = "grammar">
+                 <div id = "upper">
+                    <div id="course">
+                        <a>Algebra</a>
+                        <a>Chapter 1 - 2</a>
+                    </div>
+                    <div id="bookmark">
+                        <a href = "#"><i class="far fa-bookmark fa-2x"></i></a>
+                    </div>
+                </div>
+                <div id = "lower">
+                    <h2>@juandelacruz</h2>
+                    <p>This study set also contains answer keys from the previous exam. You're welcome!</p>
+                    <div id = "react-btns">
+                        <div id = "react">
+                            <a href="#">1.1k<i class="fas fa-heart"></i></a>
+                        </div>
+                        <div id = "react">
+                            <a href="#">87<i class="fas fa-comment"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -12,6 +113,214 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
+.profile {
+    padding: 3.75%;
+}
+
+/*Search bar styles*/
+.search-box{
+    margin-top: 0%;
+    margin-bottom: 2%;
+    left: 50%;
+    background: #e1e3e2;
+    height: 24px;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.search-box:hover{
+    background: #b9e8d4;
+}
+
+.search-btn{
+    color: #52c3a5;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.search-btn:hover {
+    color: white;
+}
+
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    color: #404040;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 20px;
+    width: 650px;
+}
+
+.caret-down-btn{
+    color: #52c3a5;
+    float: right;
+    margin-right: 10px;
+}
+
+.caret-down-btn:hover {
+    color: white;
+}
+/*Profile info styles*/
+.profile-info{
+    display: flex;
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.profile-info .left-pic {
+        float: left;
+        position: relative;
+        width: 30%;
+        height: 100%;
+}
+
+.profile-info .left-pic img{
+        border: 5px solid white;
+        left: 20%;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        bottom: 0;
+}
+
+.profile-info .right{
+    margin-left: 5%;
+}
+
+.profile-info .right h1{
+    margin-top: 0%;
+    margin-bottom: 0%;
+    font-size: 24px;
+    color: #404040;
+}
+
+.profile-info .right h2{
+    margin-top: 0%;
+    font-size: 20px;
+    font-weight: 400;
+    color: #404040;
+}
+
+.profile-info .right p{
+    color: #404040;
+}
+
+.profile-info .right a{
+    font-size: 20px;
+    font-weight: 400;
+    color: #404040;
+}
+
+.profile-info .right b{
+    margin-left: 4%;
+    font-size: 20px;
+    font-weight: 400;
+    color: #404040;
+}
+
+/*Navigation styles*/
+.navigation {
+    display: flex;
+    margin-top: 5%;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+.nav-link {
+    margin-right: 20px;
+    text-align: center;
+}
+
+.nav-link a {
+    color: #afaeb3;
+}
+
+.nav-link:hover a {
+    color: #404040;
+    border-bottom: 4px solid #52c3a5;
+}
+
+/*Study set cards style*/
+.study-set-cards {
+    margin-top: 2%;
+    $card-width: 30%;
+    $card-spacing: (100% - ($card-width * 3)) / 6;
+
+    .card {
+        display: inline-block;
+        margin: $card-spacing;
+        width: 30%;
+        min-height: 1vh * 55;
+        border-radius: 15px;
+    }
+    #upper {
+        margin-top: 0%;
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 16px 2px;
+    }
+    #course a{
+        display: block;
+        font-size: 16px;
+        color: #80c3c2;
+    }
+    #bookmark a{
+        color: #80c3c2;
+    }
+    #bookmark:hover a{
+        color: #7ed8d7;
+    }
+    #lower{
+        height: 290px;
+        width: 225px;
+        border-radius: 15px;
+        background: #eef0ef;
+        margin: 14px;
+        h2{
+            padding-top: 12px;
+            margin: 12px;
+            font-weight: 500;
+            font-size: 16px;
+            color: #404040;
+        }
+        p {
+            text-align: justify;
+            margin: 12px;
+            font: 16px;
+            color: #404040;
+        }
+        a {
+            border-bottom: 0%;
+        }
+        #react-btns{
+            display: flex;
+            margin-top: 45%;
+            margin-left: 130px;
+        }
+        #react {
+            margin-right: 10px;
+            a {
+                color: #404040;
+            }
+            .fas{
+                color: #80c3c2;
+            }
+        }     
+    }
+    #algebra { 
+        background: white;
+    }
+    #biology { 
+        background: white;
+    }
+    #grammar { 
+        background: white;
+    }
+}
 </style>
