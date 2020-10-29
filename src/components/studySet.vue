@@ -1,6 +1,6 @@
 <template>
     <div>
-        Here lies Study Set
+        <p>Dis place is my domain</p>
     </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
     <div>
-        Here lies Case Study Set
+        <p>Dis place is my Domain</p>
     </div>
 </template>
 
