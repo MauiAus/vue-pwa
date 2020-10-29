@@ -14,6 +14,14 @@
                 Logout
             </a>
         </div>
+        <!-- Left Sidebar (Tablet / Mobile) -->
+        <div id="left-mobile">
+            <router-link id="link" to="/home"><i class="fas fa-home"></i></router-link>
+            <router-link id="link" to="/library"><i class="fas fa-book-open"></i></router-link>
+            <router-link id="link" to="/createStudyset"><i class="far fa-edit"></i></router-link>
+            <router-link id="link" to="/stats"><i class="fas fa-columns"></i></router-link>
+            <a id="logout" href="#"><i class="fas fa-sign-out-alt"></i></a>
+        </div>
 
         <!-- Main Content -->
         <div id="mid">
@@ -80,6 +88,33 @@ export default {
     top: 0;
 }
 
+/* Logout (Left Sidebar) */
+%logout {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    color: #fff;
+    background-color: #ff8080;
+    padding: 5% 0%;
+    width: 100%;
+    text-align: center;
+    
+    &:hover {
+        background-color: #ff5c5c;
+    }
+}
+
+/* Links (Left Sidebar) */
+%left-sidebar-link {
+    display: block;
+    font-size: 16px;
+    color: #a5a5a5;
+
+    &:hover {
+        color: #84ccc9;
+    }
+}
+
 /* Left (Sidebar) */
 #left {
     @extend %sidebar;
@@ -97,32 +132,31 @@ export default {
     }
 
     /* Sidebar Links */
-    #link {
+    #link { 
+        @extend %left-sidebar-link;
         margin: 5% 20%;
-        display: block;
-        font-size: 16px;
-        color: #a5a5a5;
-
-        &:hover {
-            color: #84ccc9;
-        }
     }
 
-    /* Logout segment */
-    #logout {
-        position: absolute;
-        display: block;
-        bottom: 0;
-        color: #fff;
-        background-color: #ff8080;
-        padding: 5% 0%;
-        width: 100%;
+    /* Logout */
+    #logout { @extend %logout; }
+}
+
+/* Left Sidebar (Mobile) */
+#left-mobile {
+    @extend %sidebar;
+    width: 10%;
+    left: 0;
+    background-color: #fbf9fa;
+
+    /* Sidebar Links */
+    #link { 
+        @extend %left-sidebar-link;
+        margin: 30% 0%;
         text-align: center;
-
-        &:hover {
-            background-color: #ff5c5c;
-        }
     }
+    
+    /* Logout */
+    #logout { @extend %logout; }
 }
 
 /* Mid */
@@ -131,6 +165,24 @@ export default {
     width: 60%;
     min-height: 100vh;
     background-color: #eef0ef;
+}
+
+/* Change styles when screen size hits the usual tablet resolution (768px) */
+@media (max-width: 768px) {
+    #left {
+        display: none;
+    }
+
+    #mid {
+        width: 70%;
+        margin: 0% 10%;
+    }
+}
+
+@media (min-width: 769px) {
+    #left-mobile {
+        display: none;
+    }
 }
 
 /* Right (Sidebar) */
