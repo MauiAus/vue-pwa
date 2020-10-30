@@ -25,16 +25,16 @@
                         <p id="num">{{set.ind}}</p>
                         <div id="termBox">
                             <input id="StermBox" v-if="!set.ibool" type ="text" placeholder="Enter term" v-model="tempTerm"/>
-                            <input id="StermBox" v-if="set.ibool" v-bind:style="{ color: trueColor }" type ="text" placeholder="Enter term" v-model="set.term"/>
+                            <input id="StermBox" v-if="set.ibool" type ="text" placeholder="Enter term" v-model="set.term"/>
                             <p>TITLE</p>
                             <input id="defBox" v-if="!set.ibool" type ="text" placeholder="Add definition" v-model="tempDef"/>
-                            <input id="defBox" v-if="set.ibool" v-bind:style="{ color: trueColor }" type ="text" placeholder="Add definition" v-model="set.desc"/>
+                            <input id="defBox" v-if="set.ibool" type ="text" placeholder="Add definition" v-model="set.desc"/>
                             <p>DEFINITION</p>
                         </div>
                     </div>
                     <div id="rightPart">
                         <div id="iconSide">
-                            <i v-if="studySets.length > 1" class="fas fa-trash"></i>
+                            <i v-if="studySets.length > 1" class="fas fa-trash" v-on:click="removeSet()"></i>
                             <i class="far fa-plus-square" v-if="studySets.length > 1" v-on:click="addSet()"></i>
                             <i class="far fa-plus-square" v-if="studySets.length <= 1" v-bind:style="{ padding: '5% 5% 5% 55%'}" v-on:click="addSet()"></i>
                         </div>
@@ -55,6 +55,7 @@ export default {
             tempTerm:"",
             tempDef:"",
             trueColor: '#111',
+            delFlag:false,
             studySets:[
                 {term:"",desc:"",ibool:false,ind:1},
             ],
@@ -63,18 +64,29 @@ export default {
     methods:{
         addSet(){
             var i = this.studySets.length;
-            this.studySets[this.studySets.length-1] = {term:this.tempTerm,desc:this.tempDef,ibool:true,ind:i};
-            this.tempTerm = "";
-            this.tempDef = "";
-            this.studySets.push({term:this.tempTerm,desc:this.tempDef,ibool:false,ind:i+1});
+            if (!this.delFlag){
+                this.studySets[this.studySets.length-1] = {term:this.tempTerm,desc:this.tempDef,ibool:true,ind:i};
+                this.tempTerm = "";
+                this.tempDef = "";
+                this.studySets.push({term:this.tempTerm,desc:this.tempDef,ibool:false,ind:i+1});
+            }
+            else{
+                this.tempTerm = "";
+                this.tempDef = "";
+                this.studySets.push({term:this.tempTerm,desc:this.tempDef,ibool:false,ind:i+1});
+                this.delFlag = false;
+            }
             for(var j = 0; j < i; j++){
                 console.log(this.studySets[j]);
             }
-            this.checkIndex(i);
         },
-        getIndex(){
-            return this.studySets.length-1
-        },
+        removeSet(){
+            this.studySets.pop();
+            this.delFlag = true;
+            for(var j = 0; j < i; j++){
+                console.log(this.studySets[j]);
+            }
+        }
     }
 }
 </script>
@@ -223,7 +235,7 @@ export default {
                 border-radius: 0;
                 border-width: 5px;
                 font-size: 20px;
-                color: #a5a5a5;
+                color: #111;
                 width:70%;
             }
             #defBox{
@@ -233,7 +245,7 @@ export default {
                 border-radius: 0;
                 border-width: 5px;
                 font-size: 20px;
-                color: #a5a5a5;
+                color: #111;
                 width:70%;
             }
             p{
