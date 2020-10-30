@@ -248,13 +248,9 @@ export default {
 /*Study set cards style*/
 .study-set-cards {
     margin-top: 2%;
-    $card-width: 30%;
-    $card-spacing: (100% - ($card-width * 3)) / 6;
 
     .card {
         display: inline-block;
-        margin: $card-spacing;
-        width: $card-width;
         min-height: 1vh * 40;
         border-radius: 15px;
     }
@@ -331,6 +327,20 @@ export default {
     }
     #grammar { 
         background: white;
+    }
+}
+
+@media (max-width: 768px) {
+    .study-set-cards .card {
+        width: 100%;
+        margin: 15px 0;
+    }
+}
+
+@media (min-width: 769px) {
+    .study-set-cards .card {
+        width: 30%;
+        margin: (100% - (30% * 3)) / 6;
     }
 }
 </style>
