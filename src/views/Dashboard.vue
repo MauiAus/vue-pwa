@@ -227,6 +227,7 @@ export default {
             float:left;
             margin-top:9%;
             padding-left: 10%;
+            color: #111;
         }
         i{
             float:right;
