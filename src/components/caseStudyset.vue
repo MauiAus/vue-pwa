@@ -21,6 +21,9 @@
         <div id="termView">
             <ul>
                 <li v-for="set in studySets" :key="set.index">
+                    <div id="container" @dragover.prevent="dragOver" @dragleave.prevent="dragLeave" @drop.prevent="drop($event)">
+                        <h4>Drag and Drop here</h4>
+                    </div>
                     <div id="leftPart">
                         <p id="num">{{set.ind}}</p>
                         <div id="termBox">
@@ -86,7 +89,14 @@ export default {
             for(var j = 0; j < i; j++){
                 console.log(this.studySets[j]);
             }
-        }
+        },
+        addFile(e) {
+            let files = e.dataTransfer.files;
+            [...files].forEach(file => {
+            this.files.push(file);
+            console.log(this.files)
+        });
+    }
     }
 }
 </script>
@@ -269,6 +279,17 @@ export default {
                 }
             }
         }
+    }
+}
+
+#container{
+    h4{
+        text-align: center;
+        font-family: sans-serif;
+        padding: 10%;
+        background-color: #b9e8d4;
+        border-radius: 10px;
+        color: white;
     }
 }
 
