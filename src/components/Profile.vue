@@ -316,6 +316,11 @@ export default {
                 color: #80c3c2;
                 margin: 0px 5px;
             }
+
+            .fa-heart:hover {
+                transition: color 0.3s ease-in-out;
+                color: rgb(211, 78, 78);
+            }
         }
     }
     #algebra {
