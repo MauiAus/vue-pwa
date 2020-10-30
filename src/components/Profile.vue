@@ -8,10 +8,10 @@
         </div>
         <!--Profile info-->
         <div class="profile-info">
-            <div class = "left-pic">
+            <div class="left-pic">
                 <img src="../assets/img/Profpic.jpg" /> 
             </div>
-            <div class = "right">
+            <div class="right">
                 <h1>Juan Dela Cruz</h1>
                 <h2>@juandelacruz</h2>
                 <p> Hi! I'm a 3rd grader from section-A. I hope my study sets can help you! </p>
@@ -20,80 +20,80 @@
             </div>
         </div>
         <!--Navigation-->
-        <div class = "navigation">
-            <div class = "nav-link">
+        <div class="navigation">
+            <div class="nav-link">
                 <a href="#">Study Sets</a>
             </div>
-            <div class = "nav-link">
+            <div class="nav-link">
                 <a href="#">Saved</a>
             </div>
         </div>
         <!--Study set cards-->
-        <div class = "study-set-cards">
-            <div class = "card" id = "algebra">
-                <div id = "upper">
+        <div class="study-set-cards">
+            <div class="card" id="algebra">
+                <div id="upper">
                     <div id="course">
                         <a>Biology</a>
                         <a>Chapter 1 - 2</a>
                     </div>
                     <div id="bookmark">
-                        <a href = "#"><i class="far fa-bookmark fa-2x"></i></a>
+                        <a href ="#"><i class="far fa-bookmark fa-2x"></i></a>
                     </div>
                 </div>
-                <div id = "lower">
+                <div id="lower">
                     <h2>@juandelacruz</h2>
                     <p>This study set also contains answer keys from the previous exam. You're welcome!</p>
-                    <div id = "react-btns">
-                        <div id = "react">
+                    <div id="react-btns">
+                        <div id="react">
                             <a href="#">1.1k<i class="fas fa-heart"></i></a>
                         </div>
-                        <div id = "react">
+                        <div id="react">
                             <a href="#">87<i class="fas fa-comment"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class = "card" id = "biology">
-                <div id = "upper">
+            <div class="card" id="biology">
+                <div id="upper">
                     <div id="course">
                         <a>Algebra</a>
                         <a>Chapter 1 - 2</a>
                     </div>
                     <div id="bookmark">
-                        <a href = "#"><i class="far fa-bookmark fa-2x"></i></a>
+                        <a href ="#"><i class="far fa-bookmark fa-2x"></i></a>
                     </div>
                 </div>
-                <div id = "lower">
+                <div id="lower">
                     <h2>@juandelacruz</h2>
                     <p>This study set also contains answer keys from the previous exam. You're welcome!</p>
-                    <div id = "react-btns">
-                        <div id = "react">
+                    <div id="react-btns">
+                        <div id="react">
                             <a href="#">4.1k<i class="fas fa-heart"></i></a>
                         </div>
-                        <div id = "react">
+                        <div id="react">
                             <a href="#">34<i class="fas fa-comment"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class = "card" id = "grammar">
-                 <div id = "upper">
+            <div class="card" id="grammar">
+                 <div id="upper">
                     <div id="course">
                         <a>Chemistry</a>
                         <a>Chapter 1 - 2</a>
                     </div>
                     <div id="bookmark">
-                        <a href = "#"><i class="far fa-bookmark fa-2x"></i></a>
+                        <a href ="#"><i class="far fa-bookmark fa-2x"></i></a>
                     </div>
                 </div>
-                <div id = "lower">
+                <div id="lower">
                     <h2>@juandelacruz</h2>
                     <p>This study set also contains answer keys from the previous exam. You're welcome!</p>
-                    <div id = "react-btns">
-                        <div id = "react">
+                    <div id="react-btns">
+                        <div id="react">
                             <a href="#">1.0k<i class="fas fa-heart"></i></a>
                         </div>
-                        <div id = "react">
+                        <div id="react">
                             <a href="#">41<i class="fas fa-comment"></i></a>
                         </div>
                     </div>
