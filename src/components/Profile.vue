@@ -2,13 +2,9 @@
     <div class="profile">
         <!-- Search bar-->
         <div class="search-box">
-            <a class="search-btn" href="#">
-                <i class="fas fa-search fa-lg"></i>
-            </a>
+            <a class="search-btn" href="#"><i class="fas fa-search fa-lg"></i></a>
             <input class="search-txt" type="text" name="" placeholder="Search">
-            <a class="caret-down-btn" href="#">
-                <i class="fas fa-caret-down fa-lg"></i>
-            </a>
+            <a class="caret-down-btn" href="#"><i class="fas fa-caret-down fa-lg"></i></a>
         </div>
         <!--Profile info-->
         <div class="profile-info">
@@ -37,7 +33,7 @@
             <div class = "card" id = "algebra">
                 <div id = "upper">
                     <div id="course">
-                        <a>Algebra</a>
+                        <a>Biology</a>
                         <a>Chapter 1 - 2</a>
                     </div>
                     <div id="bookmark">
@@ -72,10 +68,10 @@
                     <p>This study set also contains answer keys from the previous exam. You're welcome!</p>
                     <div id = "react-btns">
                         <div id = "react">
-                            <a href="#">1.1k<i class="fas fa-heart"></i></a>
+                            <a href="#">4.1k<i class="fas fa-heart"></i></a>
                         </div>
                         <div id = "react">
-                            <a href="#">87<i class="fas fa-comment"></i></a>
+                            <a href="#">34<i class="fas fa-comment"></i></a>
                         </div>
                     </div>
                 </div>
@@ -83,7 +79,7 @@
             <div class = "card" id = "grammar">
                  <div id = "upper">
                     <div id="course">
-                        <a>Algebra</a>
+                        <a>Chemistry</a>
                         <a>Chapter 1 - 2</a>
                     </div>
                     <div id="bookmark">
@@ -95,10 +91,10 @@
                     <p>This study set also contains answer keys from the previous exam. You're welcome!</p>
                     <div id = "react-btns">
                         <div id = "react">
-                            <a href="#">1.1k<i class="fas fa-heart"></i></a>
+                            <a href="#">1.0k<i class="fas fa-heart"></i></a>
                         </div>
                         <div id = "react">
-                            <a href="#">87<i class="fas fa-comment"></i></a>
+                            <a href="#">41<i class="fas fa-comment"></i></a>
                         </div>
                     </div>
                 </div>
@@ -255,8 +251,9 @@ export default {
     .card {
         display: inline-block;
         margin: $card-spacing;
-        width: 30%;
-        min-height: 1vh * 55;
+        min-width: 30%;
+        max-width: 40%;
+        min-height: 1vh*40;
         border-radius: 15px;
     }
     #upper {
@@ -299,7 +296,7 @@ export default {
             border-bottom: 0%;
         }
         #react-btns{
-            display: flex;
+            display:flex;
             margin-top: 45%;
             margin-left: 130px;
         }
