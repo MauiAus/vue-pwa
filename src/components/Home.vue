@@ -108,6 +108,48 @@
                 </div>
             </div>
         </div>
+
+        <!--Recommended for you and more-->
+        <div class="recommended-for-you">
+            <div id="recommended">
+                Recommended for you
+            </div>
+            <a id="recommended-btn" href="#">
+                More
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <!--Recommended for you cards-->
+        <div class="cards">
+            <div class ="card" id="literature">
+                <div id="upper">
+                    <div id="section"><h2>LI</h2></div>
+                    <div id="course">
+                        <a>LIT-7</a>
+                        <a>English Literature</a>
+                    </div>
+                </div>
+            </div>
+            <div class ="card" id="geology">
+                <div id="upper">
+                    <div id="section"><h2>SG</h2></div>
+                    <div id="course">
+                        <a>SCI-6</a>
+                        <a>Geology</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="history">
+                <div id="upper">
+                    <div id="section"><h2>SH</h2></div>
+                    <div id="course">
+                        <a>SOC-5</a>
+                        <a>History</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -288,7 +330,7 @@ export default {
         #section { background: #f28d77 }
         
         &:hover {
-            transition: #fc7d60;
+            background: #fc7d60;
             transition: 0.2s;
         }
     }
@@ -347,6 +389,39 @@ export default {
             transition: 0.2s;
         }
     }
+
+    #literature {
+        background: #dc76c0;
+
+        #section { background: #e882cc }
+
+        &:hover {
+            background: #e775c8;
+            transition: 0.2s;
+        }
+    }
+
+    #geology {
+        background: #57c4c2;
+
+        #section { background: #64d0ce }
+
+        &:hover {
+            background: #57cbc9;
+            transition: 0.2s;
+        }
+    }
+
+    #history {
+        background: #fdc648;
+
+        #section { background: #fad06c }
+
+        &:hover {
+            background: #fece61;
+            transition: 0.2s;
+        }
+    }
 }
 
 /*Your materials and more styles*/
@@ -362,6 +437,28 @@ export default {
     }
 
     #more-materials-btn {
+        justify-content: right;
+        color: #404040;
+
+        &:hover {
+            color: #52c3a5;
+        }
+    }
+}
+
+/*Recommended for you and more styles*/
+.recommended-for-you {
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    color: #404040;
+
+    #recommended {
+        flex-grow: 6;
+    }
+
+    #recommended-btn {
         justify-content: right;
         color: #404040;
 
