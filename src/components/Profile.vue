@@ -223,23 +223,25 @@ export default {
 /*Navigation styles*/
 .navigation {
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
     margin-top: 5%;
-    margin-left: 40%;
-    margin-right: 40%;
-}
 
-.nav-link {
-    margin-right: 20px;
-    text-align: center;
-}
+    .nav-link  {
+        margin-right: 20px;
+        border-bottom: 4px solid transparent;
 
-.nav-link a {
-    color: #afaeb3;
-}
+        a {
+            color: #afaeb3;
+        }
 
-.nav-link:hover a {
-    color: #404040;
-    border-bottom: 4px solid #52c3a5;
+        &:hover {
+            color: #404040;
+            border-color: #52c3a5;
+        }
+    }
 }
 
 /*Study set cards style*/
