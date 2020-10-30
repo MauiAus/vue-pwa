@@ -130,6 +130,7 @@
                     </div>
                 </router-link>
             </div>
+        </div>
 
             <!--Course and more-->
         <div class="more">
