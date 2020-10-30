@@ -131,6 +131,10 @@ export default {
         color: #eef0ef;
         font-weight: bold;
         font-size: 20px;
+
+        &:hover {
+        background-color:  #b9e8d4;
+        }
     }
 }
 
