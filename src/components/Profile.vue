@@ -276,6 +276,7 @@ export default {
         color: #7ed8d7;
     }
     #lower{
+        position: relative;
         height: 290px;
         border-radius: 15px;
         background: #eef0ef;
@@ -296,22 +297,28 @@ export default {
         a {
             border-bottom: 0%;
         }
-        #react-btns{
-            display:flex;
-            margin-top: 45%;
-            margin-left: 130px;
+
+        #react-btns {
+            display: flex;
+            position: absolute;
+            bottom: 0;
+            right: 0;
         }
+
         #react {
-            margin-right: 10px;
+            margin: 5px;
+
             a {
                 color: #404040;
             }
-            .fas{
+
+            .fas { 
                 color: #80c3c2;
+                margin: 0px 5px;
             }
-        }     
+        }
     }
-    #algebra { 
+    #algebra {
         background: white;
     }
     #biology { 
