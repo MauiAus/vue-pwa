@@ -20,6 +20,11 @@ export default {
     height: 24px;
     padding: 10px;
     border-radius: 40px;
+
+    &:hover {
+        transition: 0.3s ease-in-out;
+        background: #b9e8d4;
+    }
 }
 
 .search-btn {
