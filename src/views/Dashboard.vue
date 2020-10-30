@@ -45,7 +45,7 @@
                     <li v-for="reminder in reminders" :key="reminder.index">
                     <i class="far fa-envelope"></i>
                     <div id="contents"> 
-                        <p id="name">{{reminder.course}} - {{reminder.notification}}</p>
+                        <p id="name" v-on:click="test('A','B','C')">{{reminder.course}} - {{reminder.notification}}</p>
                         <p id="date">{{reminder.date}}</p>
                     </div>
                     </li>
@@ -66,6 +66,11 @@ export default {
               {course:"Algebra", notification:"Send homework", date:"28 Dec 2020, Friday"},
               {course:"Grammar", notification:"Send homework", date:"28 Dec 2020, Friday"},
             ],
+        }
+    },
+    methods:{
+        test(x,y,z){
+            this.reminders.push({course:x,notification:y,date:z})
         }
     }
 }
