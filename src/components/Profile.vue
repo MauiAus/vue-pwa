@@ -251,9 +251,8 @@ export default {
     .card {
         display: inline-block;
         margin: $card-spacing;
-        min-width: 30%;
-        max-width: 40%;
-        min-height: 1vh*40;
+        width: $card-width;
+        min-height: 1vh * 40;
         border-radius: 15px;
     }
     #upper {
@@ -275,7 +274,6 @@ export default {
     }
     #lower{
         height: 290px;
-        width: 225px;
         border-radius: 15px;
         background: #eef0ef;
         margin: 14px;
