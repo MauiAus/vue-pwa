@@ -41,6 +41,11 @@ const routes = [
         meta: { title: 'Library' }
       },
       {
+        path: 'reminders',
+        component: () => import('@/components/Reminders.vue'),
+        meta: { title: 'Reminders' }
+      },
+      {
         path: 'stats',
         component: () => import('@/components/stats.vue'),
         meta: { title: 'Statistics'}

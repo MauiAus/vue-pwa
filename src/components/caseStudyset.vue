@@ -22,7 +22,7 @@
             <ul>
                 <li v-for="set in studySets" :key="set.index">
                     <div id="container" @dragover.prevent="dragOver" @dragleave.prevent="dragLeave" @drop.prevent="drop($event)">
-                        <h4>Drag and Drop here</h4>
+                        <h4>Drag and Drop image here</h4>
                     </div>
                     <div id="leftPart">
                         <p id="num">{{set.ind}}</p>

@@ -38,7 +38,8 @@
                 </div>
             </div>
             <div id="reminderView">
-                <p>Reminders</p><i class="far fa-bell"></i>
+                <!--<router-link id="reminders" to="/reminders"><p>Reminders</p><i class="far fa-bell"></i>-->
+                <router-link id="reminders" to="/reminders"><p>Reminders</p></router-link><i class="far fa-bell"></i>
             </div>
             <div id="notificationView">
                 <ul>
