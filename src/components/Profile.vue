@@ -1,11 +1,8 @@
 <template>
     <div class="profile">
         <!-- Search bar-->
-        <div class="search-box">
-            <a class="search-btn" href="#"><i class="fas fa-search fa-lg"></i></a>
-            <input class="search-txt" type="text" name="" placeholder="Search">
-            <a class="caret-down-btn" href="#"><i class="fas fa-caret-down fa-lg"></i></a>
-        </div>
+        <SearchBar />
+
         <!--Profile info-->
         <div class="profile-info">
             <div class="left-pic">
@@ -104,8 +101,13 @@
 </template>
 
 <script>
+import SearchBar from '@/components/SearchBar.vue'
+
 export default {
-    name: 'profile'
+    name: 'profile',
+    components: {
+        SearchBar
+    }
 }
 </script>
 
@@ -113,49 +115,6 @@ export default {
 
 .profile {
     padding: 3.75%;
-}
-
-/* Search bar */
-.search-box {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    background: #e1e3e2;
-    height: 24px;
-    padding: 10px;
-    border-radius: 40px;
-
-    &:hover {
-        transition: 0.3s ease-in-out;
-        background: #b9e8d4;
-    }
-}
-
-.search-btn {
-    color: #52c3a5;
-    margin: 0px 10px;
-
-    &:hover { color: white; }
-}
-
-.search-txt {
-    border: none;
-    background: none;
-    outline: none;
-    padding: 0;
-    color: #404040;
-    font-size: 16px;
-    transition: 0.4s;
-    line-height: 20px;
-    width: 100%;
-}
-
-.caret-down-btn {
-    color: #52c3a5;
-    float: right;
-    margin-right: 10px;
-
-    &:hover { color: white; }
 }
 
 /*Profile info styles*/

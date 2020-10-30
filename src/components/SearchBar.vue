@@ -24,6 +24,7 @@ export default {
 
 .search-btn {
     color: #52c3a5;
+    margin: 0px 10px;
 
     &:hover { color: white; }
 }
