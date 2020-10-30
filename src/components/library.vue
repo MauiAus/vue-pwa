@@ -1,66 +1,193 @@
 <template>
     <div class="library">
 
-        <!--this is the div for the searchbar-->
-        <div id="searchbar">
-            <!--saerchbar icon-->
-            <div id="icon">
-                <img src="../assets/img/Welcome.png" />
+        <!--Searchbar-->
+        <div class="search-box">
+            <a class="search-btn" href="#">
+                <i class="fas fa-search fa-lg"></i>
+            </a>
+            <input class="search-txt" type="text" name="" placeholder="Search">
+            <a class="caret-down-btn" href="#">
+                <i class="fas fa-caret-down fa-lg"></i>
+            </a>
+        </div>
+
+        <!--Course and more-->
+        <div class="more">
+            <div id="course">
+                SCI-4
             </div>
-            <!--ssearchbar text-->
-            <div id="text">
-                <p>Search</p>
+            <a id="more-btn" href="#">
+                More
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <!--Library cards-->
+        <div class = "library-cards">
+            <div class = "card">
+                <div id ="card-content">
+                    <div id = "left">
+                        <h2>CH1</h2>
+                    </div>
+                    <div id = "details">
+                        <p>CHM-1</p>
+                        <p>Chemistry 1</p>
+                    </div>
+                    <div id = "open-btn">
+                        <a href = "#"><i class="far fa-plus-square fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class = "card">
+                <div id ="card-content">
+                    <div id = "left">
+                        <h2>CH2</h2>
+                    </div>
+                    <div id = "details">
+                        <p>CHM-1</p>
+                        <p>Chemistry 1</p>
+                    </div>
+                    <div id = "open-btn">
+                        <a href = "#"><i class="far fa-plus-square fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class = "card">
+                <!-- Chapter 3 card, the only link to sam's study set-->
+                <router-link to="#">
+                    <div id ="card-content">
+                        <div id = "left">
+                            <h2>CH3</h2>
+                        </div>
+                        <div id = "details">
+                            <p>CHM-1</p>
+                            <p>Chemistry 1</p>
+                        </div>
+                        <div id = "open-btn">
+                            <a href = "#"><i class="far fa-plus-square fa-2x"></i></a>
+                        </div>
+                    </div>
+                </router-link>
             </div>
         </div>
 
-        <!--this are the divs for the content-->
-        <div class="shelf">
-            <div class="upper">
-                <p class="title">SCI-4</p>
-                <p class="more">More -></p>
+        <!--Course and more-->
+        <div class="more">
+            <div id="course">
+                SCI-4
             </div>
-            <div class="lower">
+            <a id="more-btn" href="#">
+                More
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
 
-                <!--this is a card-->
-                <div class="card">
-                    <div id="courseAcro">
-                        <p>CH1</p>
+        <!--Library cards-->
+        <div class = "library-cards">
+            <div class = "card">
+                <div id ="card-content">
+                    <div id = "left">
+                        <h2>CH1</h2>
                     </div>
-                    <div id="info">
-                        <p id="courseCode">CHM - 1</p>
-                        <p id="description">Chemistry</p>
+                    <div id = "details">
+                        <p>CHM-1</p>
+                        <p>Chemistry 1</p>
                     </div>
-                    <div id="add">
-                        <p>PLUS</p>
-                    </div>
-                </div>
-                <!--this is a card-->
-                <div class="card">
-                    <div id="courseAcro">
-                        <p>CH1</p>
-                    </div>
-                    <div id="info">
-                        <p id="courseCode">CHM - 1</p>
-                        <p id="description">Chemistry</p>
-                    </div>
-                    <div id="add">
-                        <p>PLUS</p>
+                    <div id = "open-btn">
+                        <a href = "#"><i class="far fa-plus-square fa-2x"></i></a>
                     </div>
                 </div>
-                <!--this is a card-->
-                <div class="card">
-                    <div id="courseAcro">
-                        <p>CH1</p>
+            </div>
+            <div class = "card">
+                <div id ="card-content">
+                    <div id = "left">
+                        <h2>CH2</h2>
                     </div>
-                    <div id="info">
-                        <p id="courseCode">CHM - 1</p>
-                        <p id="description">Chemistry</p>
+                    <div id = "details">
+                        <p>CHM-1</p>
+                        <p>Chemistry 1</p>
                     </div>
-                    <div id="add">
-                        <p>PLUS</p>
+                    <div id = "open-btn">
+                        <a href = "#"><i class="far fa-plus-square fa-2x"></i></a>
                     </div>
                 </div>
+            </div>
+            <div class = "card">
+                <!-- Chapter 3 card, the only link to sam's study set-->
+                <router-link to="#">
+                    <div id ="card-content">
+                        <div id = "left">
+                            <h2>CH3</h2>
+                        </div>
+                        <div id = "details">
+                            <p>CHM-1</p>
+                            <p>Chemistry 1</p>
+                        </div>
+                        <div id = "open-btn">
+                            <a href = "#"><i class="far fa-plus-square fa-2x"></i></a>
+                        </div>
+                    </div>
+                </router-link>
+            </div>
 
+            <!--Course and more-->
+        <div class="more">
+            <div id="course">
+                SCI-4
+            </div>
+            <a id="more-btn" href="#">
+                More
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <!--Library cards-->
+        <div class = "library-cards">
+            <div class = "card">
+                <div id ="card-content">
+                    <div id = "left">
+                        <h2>CH1</h2>
+                    </div>
+                    <div id = "details">
+                        <p>CHM-1</p>
+                        <p>Chemistry 1</p>
+                    </div>
+                    <div id = "open-btn">
+                        <a href = "#"><i class="far fa-plus-square fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class = "card">
+                <div id ="card-content">
+                    <div id = "left">
+                        <h2>CH2</h2>
+                    </div>
+                    <div id = "details">
+                        <p>CHM-1</p>
+                        <p>Chemistry 1</p>
+                    </div>
+                    <div id = "open-btn">
+                        <a href = "#"><i class="far fa-plus-square fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class = "card">
+                <!-- Chapter 3 card, the only link to sam's study set-->
+                <router-link to="#">
+                    <div id ="card-content">
+                        <div id = "left">
+                            <h2>CH3</h2>
+                        </div>
+                        <div id = "details">
+                            <p>CHM-1</p>
+                            <p>Chemistry 1</p>
+                        </div>
+                        <div id = "open-btn">
+                            <a href = "#"><i class="far fa-plus-square fa-2x"></i></a>
+                        </div>
+                    </div>
+                </router-link>
             </div>
         </div>
     </div>
@@ -78,116 +205,130 @@ export default {
     padding: 3.75%;
 }
 
-#searchbar {
-    background-color: #ffffff;
-    height: 5vw;
-    border-radius: 12px;
-
-    #icon {
-        float: left;
-        position: relative;
-        width: 10%;
-        height: 100%;
-
-        img {
-            margin: 10%;
-            max-width: 90%;
-            max-height: 90%;
-            position: absolute;
-        }
-    }
-
-    #text {
-            float: left;
-            width: 70%;
-            height: 100%;
-        
-        p {
-            margin: 1vw;
-            color: #52c3a5;
-            font-size: 2vw;
-            font-weight: 700;
-        }
-    }
+/*Search bar styles*/
+.search-box{
+    margin-top: 0%;
+    margin-bottom: 6%;
+    left: 50%;
+    background: #e1e3e2;
+    height: 24px;
+    border-radius: 40px;
+    padding: 10px;
 }
 
-// this is the css of a single row of cards
-.shelf {
-    width: 100%;
-    max-height: 100%;
-    margin: 0.5vw;
+.search-box:hover{
+    background: #b9e8d4;
+}
+
+.search-btn{
+    color: #52c3a5;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.search-btn:hover {
+    color: white;
+}
+
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    color: #404040;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 20px;
+    width: 650px;
+}
+
+.caret-down-btn{
+    color: #52c3a5;
+    float: right;
+    margin-right: 10px;
+}
+
+.caret-down-btn:hover {
+    color: white;
+}
+
+/*course and more styles*/
+.more {
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    color: #404040;
     
-    .upper {
-        height: 10%;
-        margin-bottom: 1px;
-        p {
-            margin: 0.5%;
-            font-size: 100%;
-        }
-        .title {
-            float: left;
-        }
-        .more {
-            float: right;
-        }
-    }
-    .lower {
-        // calculate space between cards according to their width
-        display: flex;
-        flex-direction: row;
-        $card-width: 30%;
-        $card-spacing: (100% - ($card_width * 3)) / 6;
-
-        .card {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-
-            background-color: #fff;
-            border-radius: 10px;
-            width: $card-width;
-            margin: $card-spacing;
-
-            div{
-                height: 3.5vw;
-                width: 3.5vw;
-                margin: 0.5vw;
-                border-radius: 5px;
-            }
-
-            #courseAcro{
-                background-color: red;
-                
-                p{
-                    text-align: center;
-                    vertical-align: middle;
-
-                    font-size: 1vw;
-                }
-            }
-            #info{
-                flex-grow: 6;
-
-                p{
-                    font-family: 'Courier New', Courier, monospace;;
-                    font-size: 0.6vw;
-                    vertical-align: middle;
-                    
-                    &#description{
-                        color: gray;
-                    }
-                }
-            }
-            #add{
-                float: right;
-
-                p{
-                    font-size: 1vw;
-                }
-            }
-        }
+    #course {
+        flex-grow: 6;
     }
 
+    #more-btn {
+        justify-content: right;
+        color: #404040;
+
+        &:hover {
+            color: #52c3a5;        
+        }
+    }
 }
 
+/*library cards styles*/
+.library-cards {
+    $card-width: 30%;
+    $card-spacing: (100% - ($card-width * 3)) / 6;
+
+    .card {
+        display: inline-block;
+        margin: $card-spacing;
+        width: 30%;
+        min-height: 1vh * 5;
+
+        #card-content {
+            display: flex;
+            justify-content: space-between;
+            background: white;
+            border-radius: 15px;
+
+            #left {
+                height: 60px;
+                width: 60px;
+                border-radius: 10px;
+                margin: 10px;
+                background: #eef0ef;
+
+                h2 {
+                    text-align: center;
+                    color: #80c3c2;
+                    margin-top: 12px;
+                    font-weight: 500;
+                }
+            }
+
+            #details {
+                height: 60px;
+                width: 60px;
+                margin: 10px;
+                
+                p {
+                    font-size: 10px;
+                }
+            }
+
+            #open-btn{
+                margin-top: 24px;
+                margin-right: 15px;
+
+                .far {
+                    color: #81d3d2;
+                }
+            }
+        }
+
+        #card-content:hover {
+            background: #faf9f9;
+        }
+    }
+}
 </style>
