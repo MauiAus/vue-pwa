@@ -240,6 +240,7 @@ export default {
         &:hover {
             color: #404040;
             border-color: #52c3a5;
+            transition: border-color 0.4s ease-in;
         }
     }
 }
