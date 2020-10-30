@@ -67,6 +67,8 @@ export default {
               {course:"Grammar", notification:"Send homework", date:"28 Dec 2020, Friday"},
             ],
         }
+    },
+    methods:{
     }
 }
 </script>
