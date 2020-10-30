@@ -115,32 +115,30 @@ export default {
     padding: 3.75%;
 }
 
-/*Search bar styles*/
-.search-box{
-    margin-top: 0%;
-    margin-bottom: 2%;
-    left: 50%;
+/* Search bar */
+.search-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     background: #e1e3e2;
     height: 24px;
-    border-radius: 40px;
     padding: 10px;
+    border-radius: 40px;
+
+    &:hover {
+        transition: 0.3s ease-in-out;
+        background: #b9e8d4;
+    }
 }
 
-.search-box:hover{
-    background: #b9e8d4;
-}
-
-.search-btn{
+.search-btn {
     color: #52c3a5;
-    margin-left: 10px;
-    margin-right: 20px;
+    margin: 0px 10px;
+
+    &:hover { color: white; }
 }
 
-.search-btn:hover {
-    color: white;
-}
-
-.search-txt{
+.search-txt {
     border: none;
     background: none;
     outline: none;
@@ -149,17 +147,15 @@ export default {
     font-size: 16px;
     transition: 0.4s;
     line-height: 20px;
-    width: 650px;
+    width: 100%;
 }
 
-.caret-down-btn{
+.caret-down-btn {
     color: #52c3a5;
     float: right;
     margin-right: 10px;
-}
 
-.caret-down-btn:hover {
-    color: white;
+    &:hover { color: white; }
 }
 
 /*Profile info styles*/
