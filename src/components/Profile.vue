@@ -161,63 +161,78 @@ export default {
 .caret-down-btn:hover {
     color: white;
 }
+
 /*Profile info styles*/
-.profile-info{
-    display: flex;
-    margin-top: 5%;
-    margin-left: 15%;
-    margin-right: 15%;
-}
+.profile-info {
+    margin: 5% 0;
 
-.profile-info .left-pic {
-        float: left;
-        position: relative;
-        width: 30%;
-        height: 100%;
-}
-
-.profile-info .left-pic img{
+    .left-pic img {
         border: 5px solid white;
-        left: 20%;
-        width: 100%;
-        height: 100%;
         border-radius: 50%;
-        bottom: 0;
+        width: 200px;
+        height: 200px;
+    }
+
+    .right {
+        color: #404040;
+
+        h1 {
+            margin: 0;
+            font-size: 24px
+        }
+
+        h2 {
+            margin-top: 0%;
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+        a {
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+        b {
+            margin-left: 4%;
+            font-size: 20px;
+            font-weight: 400;
+        }
+    }
 }
 
-.profile-info .right{
-    margin-left: 5%;
+@media (max-width: 1024px) {
+    .profile-info {
+        display: block;
+
+        .left-pic {
+            text-align: center;
+        }
+
+        .right {
+            text-align: center;
+        }
+    }
 }
 
-.profile-info .right h1{
-    margin-top: 0%;
-    margin-bottom: 0%;
-    font-size: 24px;
-    color: #404040;
-}
+@media (min-width: 1025px) {
+    .profile-info {
+        display: flex;
 
-.profile-info .right h2{
-    margin-top: 0%;
-    font-size: 20px;
-    font-weight: 400;
-    color: #404040;
-}
+        .left-pic {
+            width: 40%;
+            float: left;
+        }
 
-.profile-info .right p{
-    color: #404040;
-}
+        .left-pic img {
+            float: right;
+        }
 
-.profile-info .right a{
-    font-size: 20px;
-    font-weight: 400;
-    color: #404040;
-}
-
-.profile-info .right b{
-    margin-left: 4%;
-    font-size: 20px;
-    font-weight: 400;
-    color: #404040;
+        .right {
+            width: 60%;
+            float: right;
+            margin-left: 5%;
+        }
+    }
 }
 
 /*Navigation styles*/
