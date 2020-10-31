@@ -26,18 +26,23 @@
                 <div id="upper">
                     <ul>
                         <li v-for="subj in subjectsList" :key="subj.index">
-                            <div id="cardBox">
-                            <p id="inBox">{{subj.course.slice(0,-2)}}</p>
-                            </div>
-                            <div id="infoBox">
-                            <p id="cBox">{{subj.course}}</p>
-                            <p id="dBox">{{subj.desc}}</p>
+                            <div v-on:click="returnType(subj.course)">
+                                <div id="cardBox">
+                                    <div id="inBox">
+                                        <i class="fas fa-book"></i>
+                                    </div>
+                                </div>
+                                <div id="infoBox">
+                                <p id="cBox">{{subj.course}}</p>
+                                <p id="dBox">{{subj.desc}}</p>
+                                </div>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="graph">
+                <div v-if="sciSel">
                     <h3>Your test scores in SCI - 1</h3>
                     <ve-bar 
                         :data="scienceData" 
@@ -45,6 +50,16 @@
                         width="500px"
                         >
                     </ve-bar>
+                </div>
+                <div v-if="geoSel">
+                    <h3>Your test scores in GEO - 1</h3>
+                    <ve-bar 
+                        :data="GeoData" 
+                        height="350px" 
+                        width="500px"
+                        >
+                    </ve-bar>
+                </div>
             </div>
         </div>
         
@@ -66,7 +81,6 @@ export default {
                     {'subject': 'Geology 1', 'Average Percentage of Scores': 90 }
                 ]
             },
-
             scienceData:{
                 columns: ['Test', 'Score Percentage'],
                 rows: [
@@ -79,6 +93,18 @@ export default {
                     {'Test': 'Homework2 ', 'Score Percentage': 76}
                 ]
             },
+            GeoData:{
+                columns: ['Test', 'Score Percentage'],
+                rows: [
+                    {'Test': 'Quiz 1', 'Score Percentage': 75},
+                    {'Test': 'Quiz 2', 'Score Percentage': 65},
+                    {'Test': 'Quiz 3', 'Score Percentage': 90},
+                    {'Test': 'Seatwork 1', 'Score Percentage': 90},
+                    {'Test': 'Seatwork 2', 'Score Percentage': 85},
+                    {'Test': 'Homework 1', 'Score Percentage': 60},
+                    {'Test': 'Homework2 ', 'Score Percentage': 100}
+                ]
+            },
             subjectsList:[
                 {course:"GEO-1",desc:"Geology: Mother Earth"},
                 {course:"SCI-1",desc:"Science: The Fundamentals"},
@@ -86,8 +112,28 @@ export default {
                 {course:"ALG-2",desc:"Math: Intermediate Algebra"},
                 {course:"ENG-3",desc:"Communication Fundamentals"},
             ],
+            sciSel:true,
+            geoSel:false,
         }
-    }
+    },
+    methods:{
+        selSci(){
+            this.sciSel=true;
+            this.geoSel=false;
+        },
+        selGeo(){
+            this.sciSel=false;
+            this.geoSel=true;
+        },
+        returnType(val){
+            if(val == "GEO-1"){
+                this.selGeo();
+            }
+            if(val == "SCI-1"){
+                this.selSci();
+            }
+        }
+    },
 }
 </script>
 
@@ -197,20 +243,21 @@ export default {
             padding: 0;
         }
         li{
-            display: flex;
+            &:hover {
+                background-color: #eef0ef;
+            }
         }
         #cardBox{
-            p{
-                text-align: center;
-                width: 55px;
-                height: 55px;
-                background-color: #52c3a5;
-                margin: auto;
-                font-size: 150%;
-                border-radius: 10px;
-                color: #fbf9fa;
-                padding: 5% 10% 5%;
-                margin: 5%;
+            #inBox{
+                i{
+                    float:left;
+                    background-color: #b9e8d4;
+                    font-size: 300%;
+                    padding: 5%;
+                    margin: auto 1.5%;
+                    border-radius: 10%;
+                    color: #fbf9fa;
+                }
             }
         }
         #infoBox{
