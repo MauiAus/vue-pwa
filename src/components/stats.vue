@@ -22,41 +22,19 @@
             </div>
         </div>
         <div class="cards">
-            <div class ="card" id="divisions">
+            <div class ="card">
                 <div id="upper">
-                    <div id="section"><h2>GEO</h2></div>
-                    <div id="course">
-                        <a>GEO - 1</a>
-                        <a>Geology: Mother Earth</a>
-                    </div>
-                </div>
-                <div id="upper">
-                    <div id="section"><h2>SCI</h2></div>
-                    <div id="course">
-                        <a>SCI-1</a>
-                        <a>Science: The Fundamentals</a>
-                    </div>
-                </div>
-                <div id="upper">
-                    <div id="section"><h2>ART</h2></div>
-                    <div id="course">
-                        <a>ARTS - 1</a>
-                        <a>Arts: Filipino Paintings</a>
-                    </div>
-                </div>
-                <div id="upper">
-                    <div id="section"><h2>MTH</h2></div>
-                    <div id="course">
-                        <a>ALG - 2</a>
-                        <a>Math: Intermediate Algebra</a>
-                    </div>
-                </div>
-                <div id="upper">
-                    <div id="section"><h2>ENG</h2></div>
-                    <div id="course">
-                        <a>ENG - 3</a>
-                        <a>Communication Fundamentals</a>
-                    </div>
+                    <ul>
+                        <li v-for="subj in subjectsList" :key="subj.index">
+                            <div id="cardBox">
+                            <p id="inBox">{{subj.course.slice(0,-2)}}</p>
+                            </div>
+                            <div id="infoBox">
+                            <p id="cBox">{{subj.course}}</p>
+                            <p id="dBox">{{subj.desc}}</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="graph">
@@ -100,7 +78,14 @@ export default {
                     {'Test': 'Homework 1', 'Score Percentage': 57},
                     {'Test': 'Homework2 ', 'Score Percentage': 76}
                 ]
-            }
+            },
+            subjectsList:[
+                {course:"GEO-1",desc:"Geology: Mother Earth"},
+                {course:"SCI-1",desc:"Science: The Fundamentals"},
+                {course:"ARTS-1",desc:"Arts: Filipino Paintings"},
+                {course:"ALG-2",desc:"Math: Intermediate Algebra"},
+                {course:"ENG-3",desc:"Communication Fundamentals"},
+            ],
         }
     }
 }
@@ -159,6 +144,7 @@ export default {
         }
     }
     #aveBar{
+        display: flex;
         margin-top:0%;
         padding:5%;
         background-color: #fbf9fa;
@@ -192,6 +178,7 @@ export default {
     }
 
     .graph{
+        margin-left: 5%;
         h3 {
             color: #52c3a5;
         }
@@ -200,49 +187,47 @@ export default {
     p{
         color: #e48186
     }
-
-    .card {
-        display: inline-block;
-        margin: $card-spacing;
-        width: 30%;
-        min-height: 1vh * 52;
-        border-radius: 15px;
-
-        #upper {
+    #upper{
+        border-right: 2px solid #84ccc9;
+        border-radius: 0;
+        border-width: 5px;
+        color: #111;
+        ul{
+            list-style: none;
+            padding: 0;
+        }
+        li{
             display: flex;
-
-            #section {
-                margin: 7% 2% 0% 5%;
-                width: 70px;
-                height: 70px;
-                border-radius:15px;
-
-                h2 {
-                    text-align: center;
-                    font-weight: 500;
-                    color: rgb(255, 255, 255);
-                }
-            }
-
-            #course {
-                margin-top: 9%;
-
-                a {
-                    display: block;
-                    color: white;
-                }
+        }
+        #cardBox{
+            p{
+                text-align: center;
+                width: 55px;
+                height: 55px;
+                background-color: #52c3a5;
+                margin: auto;
+                font-size: 150%;
+                border-radius: 10px;
+                color: #fbf9fa;
+                padding: 5% 10% 5%;
+                margin: 5%;
             }
         }
-
-        p {
-            color: white;
-            margin: 200px 10% 0 10%;
-            text-align: justify;
-            text-justify: inter-word;
+        #infoBox{
+            margin-left: 7%;
+            margin-top:0;
+            #cBox{
+                margin-top:0%;
+                font-size: 14px;
+                color: #848384;
+                font-weight: bold;
+            }
+            #dBox{
+                margin-top:0%;
+                color: #a5a5a5;
+            }
         }
     }
-
-
 }
 
     
