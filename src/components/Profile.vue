@@ -266,7 +266,7 @@ export default {
 }
 
 /*Responsive Profie.vue 101*/
-@media (min-width:855px) {
+@media (min-width:870px) {
     .profile-info {
         display: flex;
 
@@ -287,7 +287,7 @@ export default {
     }
 }
 
-@media (max-width:854px) {
+@media (max-width:869px) {
     .profile-info {
         display: block;
 
