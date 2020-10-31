@@ -286,6 +286,10 @@ export default {
         width: 30%;
         min-height: 1vh * 5;
 
+        .router-link-active {
+            color: black;
+        }
+
         #card-content {
             display: flex;
             justify-content: space-between;
@@ -314,6 +318,7 @@ export default {
                 
                 p {
                     font-size: 10px;
+                    color: black;
                 }
             }
 
