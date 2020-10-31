@@ -220,7 +220,7 @@ export default {
             color: #404040;
         }
         p {
-            text-align: justify;
+            text-align: left;
             margin: 12px;
             font: 16px;
             color: #404040;
