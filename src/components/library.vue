@@ -203,53 +203,6 @@ export default {
     padding: 3.75%;
 }
 
-/*Search bar styles*/
-.search-box{
-    margin-top: 0%;
-    margin-bottom: 6%;
-    left: 50%;
-    background: #e1e3e2;
-    height: 24px;
-    border-radius: 40px;
-    padding: 10px;
-}
-
-.search-box:hover{
-    background: #b9e8d4;
-}
-
-.search-btn{
-    color: #52c3a5;
-    margin-left: 10px;
-    margin-right: 20px;
-}
-
-.search-btn:hover {
-    color: white;
-}
-
-.search-txt{
-    border: none;
-    background: none;
-    outline: none;
-    padding: 0;
-    color: #404040;
-    font-size: 16px;
-    transition: 0.4s;
-    line-height: 20px;
-    width: 650px;
-}
-
-.caret-down-btn{
-    color: #52c3a5;
-    float: right;
-    margin-right: 10px;
-}
-
-.caret-down-btn:hover {
-    color: white;
-}
-
 /*course and more styles*/
 .more {
     margin-top: 2%;
