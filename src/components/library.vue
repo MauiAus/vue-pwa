@@ -2,15 +2,7 @@
     <div class="library">
 
         <!--Searchbar-->
-        <div class="search-box">
-            <a class="search-btn" href="#">
-                <i class="fas fa-search fa-lg"></i>
-            </a>
-            <input class="search-txt" type="text" name="" placeholder="Search">
-            <a class="caret-down-btn" href="#">
-                <i class="fas fa-caret-down fa-lg"></i>
-            </a>
-        </div>
+        <SearchBar />
 
         <!--Course and more-->
         <div class="more">
@@ -195,8 +187,13 @@
 </template>
 
 <script>
+import SearchBar from '@/components/SearchBar.vue'
+
 export default {
-    name: 'library'
+    name: 'library',
+    components: {
+        SearchBar
+    }
 }
 </script>
 
