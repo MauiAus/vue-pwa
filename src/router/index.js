@@ -49,7 +49,7 @@ const routes = [
         path: 'stats',
         component: () => import('@/components/stats.vue'),
         meta: { title: 'Statistics'}
-      }
+      },
     ]
   }
 ]

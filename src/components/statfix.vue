@@ -8,20 +8,25 @@
                 <img src="../assets/img/progress-icon.png"/>
             </div>
         </div>
-        <div id="topBox">
-            <div id = "gradeBox">
-                    <p id= "overview">Dashboard</p>
-                <div id="aveBar">
-                    <ve-bar 
-                        :data="chartData" 
-                        height="350px" 
-                        width="750px"
-                        >
-                    </ve-bar>
-                </div>
-            </div>
+        <div class="overview">
+            <p>Overview</p>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <div class="aveBar">
+            <ve-bar 
+                :data="chartData" 
+                height="350px" 
+                width="1000px"
+                >
+            </ve-bar>
+            <p>Based on the data given, you should work on Science 1. Go to the library to find study materials or create your own study set.</p>
         </div>
         <div class="cards">
+            <h1>Subjects</h1>
+            <br/>
+            <br/>
             <div class ="card" id="divisions">
                 <div id="upper">
                     <div id="section"><h2>GEO</h2></div>
@@ -63,11 +68,15 @@
                     <h3>Your test scores in SCI - 1</h3>
                     <ve-bar 
                         :data="scienceData" 
-                        height="350px" 
-                        width="500px"
+                        height="500px" 
+                        width="725px"
                         >
                     </ve-bar>
             </div>
+            <br/>
+            <br/>
+
+            <p>Based on the data given, you should work on Homework 1. Go to the library to find study materials or create your own study set.</p>
         </div>
         
     </div>
@@ -110,7 +119,6 @@ export default {
 .tracker-title {
     padding: 2%
 }
-
 #tracker-box {
     background-color: #b9e8d4;
     height: 5vw;
@@ -147,39 +155,27 @@ export default {
     }
 }
 
-#topBox{
-    #gradeBox{
-        #overview {
-            border: 0 none #ccc;
-            border-bottom: 2px solid #84ccc9;
-            border-radius: 0;
-            border-width: 5px;
-            font-size: 20px;
-            color: #111;
-        }
+.overview {
+    p{
+        margin: 1vh;
+        color: #52c3a5;
+        font-size: 1.5vw;
+        font-weight: 700;
+        text-align: left;
+        position: absolute;
+        width: 100%;
     }
-    #aveBar{
-        margin-top:0%;
-        padding:5%;
-        background-color: #fbf9fa;
-        border-radius: 10px;
-        box-shadow: 10px 10px #b9e8d4;
-        p{
-            color: #e48186
-        }
-    }
+}
 
+.aveBar{
+    p{
+        color: #e48186
+    }
 }
 .cards {
     // calculate space between cards according to width
     $card-width: 30%;
     $card-spacing: (100% - ($card-width * 3)) / 6;
-    margin-top: 5%;
-    padding: 2%;
-    background-color: #fbf9fa;
-    border-radius: 10px;
-    box-shadow: 10px 10px #b9e8d4;
-    display: flex;
     h1{
         margin: 1vh;
         color: #ffffff;
@@ -192,6 +188,7 @@ export default {
     }
 
     .graph{
+        float: right;
         h3 {
             color: #52c3a5;
         }
@@ -248,9 +245,12 @@ export default {
     
 
 #divisions {
-    background-color: #c3e2dd;
-    #section { background: #c7c7bb }    
-}
+        background-color: #c3e2dd;
+
+        #section { background: #c7c7bb }    
+           
+
+    }
 
 
 </style>
