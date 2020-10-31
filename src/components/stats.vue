@@ -15,12 +15,7 @@
         <br/>
         <br/>
         <div class="aveBar">
-            <ve-bar 
-                :data="chartData" 
-                height="350px" 
-                width="1000px"
-                >
-            </ve-bar>
+            <ve-bar :data="chartData"></ve-bar>
             <p>Based on the data given, you should work on Science 1. Go to the library to find study materials or create your own study set.</p>
         </div>
         <div class="cards">
