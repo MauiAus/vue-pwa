@@ -155,41 +155,6 @@ export default {
     }
 }
 
-@media (max-width: 1024px) {
-    .profile-info {
-        display: block;
-
-        .left-pic {
-            text-align: center;
-        }
-
-        .right {
-            text-align: center;
-        }
-    }
-}
-
-@media (min-width: 1025px) {
-    .profile-info {
-        display: flex;
-
-        .left-pic {
-            width: 40%;
-            float: left;
-        }
-
-        .left-pic img {
-            float: right;
-        }
-
-        .right {
-            width: 60%;
-            float: right;
-            margin-left: 5%;
-        }
-    }
-}
-
 /*Navigation styles*/
 .navigation {
     display: flex;
@@ -300,17 +265,55 @@ export default {
     }
 }
 
-@media (max-width: 768px) {
+/*Responsive Profie.vue 101*/
+@media (min-width: 1700px) {
+    .profile-info {
+        display: flex;
+
+        .left-pic {
+            width: 40%;
+            float: left;
+        }
+
+        .left-pic img {
+            float: right;
+        }
+
+        .right {
+            width: 60%;
+            float: right;
+            margin-left: 5%;
+        }
+    }
+}
+
+@media (max-width: 1699px) {
+    .profile-info {
+        display: block;
+
+        .left-pic {
+            text-align: center;
+        }
+
+        .right {
+            text-align: center;
+        }
+    }
+
+}
+
+@media (max-width: 1699px) {
     .study-set-cards .card {
         width: 100%;
         margin: 15px 0;
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1700px) {
     .study-set-cards .card {
         width: 30%;
         margin: (100% - (30% * 3)) / 6;
     }
 }
+
 </style>
