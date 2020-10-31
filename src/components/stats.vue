@@ -178,12 +178,13 @@ export default {
     $card-spacing: (100% - ($card-width * 3)) / 6;
     h1{
         margin: 1vh;
-        color: #52c3a5;
+        color: #ffffff;
         font-size: 1.25vw;
         font-weight: 700;
         text-align: left;
         position: absolute;
         width: 100%;
+
     }
 
     .graph{
