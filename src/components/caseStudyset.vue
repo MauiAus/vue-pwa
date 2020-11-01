@@ -21,47 +21,102 @@
         <div id="termView">
             <ul>
                 <li v-for="set in studySets" :key="set.index">
-                    <div v-if="set.toggleM">
-                    <div id="container" @dragover.prevent="dragOver" @dragleave.prevent="dragLeave" @drop.prevent="drop($event)">
-                        <h4>Drag and Drop image here</h4>
-                    </div>
-                    </div>
-                    <div id="bottomBox">
-                    <div id="leftPart">
-                        <p id="num">{{set.ind}}</p>
-                        <div id="termBox">
-                            <div v-if="set.toggleH">
-                            <input id="StermBox" v-if="!set.ibool" type ="text" placeholder="Enter term" v-model="tempTerm"/>
-                            <input id="StermBox" v-if="set.ibool" type ="text" placeholder="Enter term" v-model="set.term"/>
-                            <p>TITLE</p>
-                            </div>
-                            <div v-if="set.toggleD">
-                            <input id="defBox" v-if="!set.ibool" type ="text" placeholder="Add definition" v-model="tempDef"/>
-                            <input id="defBox" v-if="set.ibool" type ="text" placeholder="Add definition" v-model="set.desc"/>
-                            <p>DEFINITION</p>
-                            </div>
+                    <div v-if="set.toggleG" id="subBox">
+                        <ul>
+                            <li v-for="sub in subSets" :key="sub.index">
+                                <div v-if="sub.toggleM">
+                                    <div id="container" @dragover.prevent="dragOver" @dragleave.prevent="dragLeave" @drop.prevent="drop($event)">
+                                        <h4>Drag and Drop image here</h4>
+                                    </div>
+                                </div>
+                                <div id="bottomBox">
+                                    <div id="leftPart">
+                                        <p id="num">{{sub.ind}}</p>
+                                        <div id="termBox">
+                                            <div v-if="sub.toggleH">
+                                            <input id="StermBox" v-if="!sub.ibool" type ="text" placeholder="Enter term" v-model="tempTerm"/>
+                                            <input id="StermBox" v-if="sub.ibool" type ="text" placeholder="Enter term" v-model="sub.term"/>
+                                            <p>TITLE</p>
+                                            </div>
+                                            <div v-if="sub.toggleD">
+                                            <input id="defBox" v-if="!sub.ibool" type ="text" placeholder="Add definition" v-model="tempDef"/>
+                                            <input id="defBox" v-if="sub.ibool" type ="text" placeholder="Add definition" v-model="sub.desc"/>
+                                            <p>DEFINITION</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="rightPart">
+                                        <div id="iconSide">
+                                            <ul>
+                                                <li>
+                                                <i class="fas fa-heading" v-on:click="togglesubHead(sub.ind)"></i>
+                                                <i class="fas fa-quote-right" v-on:click="togglesubDef(sub.ind)"></i>
+                                                </li>
+                                                <li>
+                                                <i class="fas fa-photo-video" id="media" v-on:click="togglesubMedia(sub.ind)"></i>
+                                                <i class="fas fa-layer-group" v-on:click="togglesubGroup(sub.ind)"></i>
+                                                </li>
+                                                <li>
+                                                <i v-if="subSets.length > 1" class="fas fa-trash" v-on:click="removesubSet()"></i>
+                                                <i class="far fa-plus-square" v-if="subSets.length > 1" v-on:click="addsubSet()"></i>
+                                                <i class="far fa-plus-square" v-if="subSets.length <= 1"  v-bind:style="{ padding: '5% 5% 5% 33%'}" v-on:click="addsubSet()"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div id="subiconBox">
+                            <i class="fas fa-layer-group" v-on:click="toggleGroup(set.ind)"></i>
+                            <i v-if="subSets.length > 1" class="fas fa-trash" v-on:click="removeSet()"></i>
+                            <i class="far fa-plus-square" v-if="subSets.length > 1" v-on:click="addSet()"></i>
+                            <i class="far fa-plus-square" v-if="subSets.length <= 1" v-on:click="addsubSet()"></i>
                         </div>
                     </div>
-                    <div id="rightPart">
-                        <div id="iconSide">
-                            <ul>
-                                <li>
-                                <i class="fas fa-heading" v-on:click="toggleHead(set.ind)"></i>
-                                <i class="fas fa-quote-right" v-on:click="toggleDef(set.ind)"></i>
-                                </li>
-                                <li>
-                                <i class="fas fa-photo-video" id="media" v-on:click="toggleMedia(set.ind)"></i>
-                                <i class="fas fa-layer-group" v-on:click="toggleGroup(set.ind)"></i>
-                                </li>
-                                <li>
-                                <i v-if="studySets.length > 1" class="fas fa-trash" v-on:click="removeSet()"></i>
-                                <i class="far fa-plus-square" v-if="studySets.length > 1" v-on:click="addSet()"></i>
-                                <i class="far fa-plus-square" v-if="studySets.length <= 1"  v-bind:style="{ padding: '5% 5% 5% 33%'}" v-on:click="addSet()"></i>
-                                </li>
-                            </ul>
-                            <!-- v-bind:style="{ padding: '5% 5% 5% 55%'}" -->
+                    <div v-if="!set.toggleG">
+                        <div v-if="set.toggleM">
+                            <div id="container" @dragover.prevent="dragOver" @dragleave.prevent="dragLeave" @drop.prevent="drop($event)">
+                                <h4>Drag and Drop image here</h4>
+                            </div>
                         </div>
-                    </div>
+                        <div id="bottomBox">
+                            <div id="leftPart">
+                                <p id="num">{{set.ind}}</p>
+                                <div id="termBox">
+                                    <div v-if="set.toggleH">
+                                    <input id="StermBox" v-if="!set.ibool" type ="text" placeholder="Enter term" v-model="tempTerm"/>
+                                    <input id="StermBox" v-if="set.ibool" type ="text" placeholder="Enter term" v-model="set.term"/>
+                                    <p>TITLE</p>
+                                    </div>
+                                    <div v-if="set.toggleD">
+                                    <input id="defBox" v-if="!set.ibool" type ="text" placeholder="Add definition" v-model="tempDef"/>
+                                    <input id="defBox" v-if="set.ibool" type ="text" placeholder="Add definition" v-model="set.desc"/>
+                                    <p>DEFINITION</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="rightPart">
+                                <div id="iconSide">
+                                    <ul>
+                                        <li>
+                                        <i class="fas fa-heading" v-on:click="toggleHead(set.ind)"></i>
+                                        <i class="fas fa-quote-right" v-on:click="toggleDef(set.ind)"></i>
+                                        </li>
+                                        <li>
+                                        <i class="fas fa-photo-video" id="media" v-on:click="toggleMedia(set.ind)"></i>
+                                        <i class="fas fa-layer-group" v-on:click="toggleGroup(set.ind)"></i>
+                                        </li>
+                                        <li>
+                                        <i v-if="studySets.length > 1" class="fas fa-trash" v-on:click="removeSet()"></i>
+                                        <i class="far fa-plus-square" v-if="studySets.length > 1" v-on:click="addSet()"></i>
+                                        <i class="far fa-plus-square" v-if="studySets.length <= 1"  v-bind:style="{ padding: '5% 5% 5% 33%'}" v-on:click="addSet()"></i>
+                                        </li>
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </li>
             </ul>
@@ -85,6 +140,9 @@ export default {
             trueColor: '#111',
             delFlag:false,
             studySets:[
+                {term:"",desc:"",ibool:false,ind:1,toggleH:true,toggleD:true,toggleG:false,toggleM:false},
+            ],
+            subSets:[
                 {term:"",desc:"",ibool:false,ind:1,toggleH:true,toggleD:true,toggleG:false,toggleM:false},
             ],
         }
@@ -130,6 +188,47 @@ export default {
         },
         toggleGroup(i){
             this.studySets[i-1].toggleG = !this.studySets[i-1].toggleG;
+        },
+        addsubSet(){
+            var i = this.subSets.length;
+            this.tempH=this.subSets[i-1].toggleH;
+            this.tempD=this.subSets[i-1].toggleD;
+            this.tempM=this.subSets[i-1].toggleM;
+            this.tempG=this.subSets[i-1].toggleG;
+            if (!this.delFlag){
+                this.subSets[this.subSets.length-1] = {term:this.tempTerm,desc:this.tempDef,ibool:true,ind:i,toggleH:this.tempH,toggleD:this.tempD,toggleG:this.tempG,toggleM:this.tempM};
+                this.tempTerm = "";
+                this.tempDef = "";
+                this.subSets.push({term:this.tempTerm,desc:this.tempDef,ibool:false,ind:i+1,toggleH:true,toggleD:true,toggleG:false,toggleM:false});
+            }
+            else{
+                this.tempTerm = "";
+                this.tempDef = "";
+                this.subSets.push({term:this.tempTerm,desc:this.tempDef,ibool:false,ind:i+1,toggleH:true,toggleD:true,toggleG:false,toggleM:false});
+                this.delFlag = false;
+            }
+            for(var j = 0; j < i; j++){
+                console.log(this.subSets[j]);
+            }
+        },
+        removesubSet(){
+            this.subSets.pop();
+            this.delFlag = true;
+            for(var j = 0; j < this.subSets.length; j++){
+                console.log(this.subSets[j]);
+            }
+        },
+        togglesubHead(i){
+            this.subSets[i-1].toggleH = !this.subSets[i-1].toggleH;
+        },
+        togglesubDef(i){
+            this.subSets[i-1].toggleD = !this.subSets[i-1].toggleD;
+        },
+        togglesubMedia(i){
+            this.subSets[i-1].toggleM = !this.subSets[i-1].toggleM;
+        },
+        togglesubGroup(i){
+            this.subSets[i-1].toggleG = !this.subSets[i-1].toggleG;
         },
     }
 }
@@ -256,6 +355,22 @@ export default {
 
     #bottomBox{
         display:flex;
+    }
+
+    #subBox{
+        #subiconBox{
+            display:flex;
+            margin-left:80%;
+            i{
+                padding:5%;
+                font-size: 25px;
+                margin: 5% 5% 5%;
+                width:100%;
+                &:hover {
+                color:  #b9e8d4;
+                }
+            }       
+        }
     }
 
     #leftPart{
