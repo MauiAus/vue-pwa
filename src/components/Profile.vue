@@ -220,7 +220,7 @@ export default {
             color: #404040;
         }
         p {
-            text-align: justify;
+            text-align: left;
             margin: 12px;
             font: 16px;
             color: #404040;
@@ -266,7 +266,7 @@ export default {
 }
 
 /*Responsive Profie.vue 101*/
-@media (min-width: 1700px) {
+@media (min-width:870px) {
     .profile-info {
         display: flex;
 
@@ -287,7 +287,7 @@ export default {
     }
 }
 
-@media (max-width: 1699px) {
+@media (max-width:869px) {
     .profile-info {
         display: block;
 
@@ -302,14 +302,14 @@ export default {
 
 }
 
-@media (max-width: 1699px) {
+@media (max-width: 1049px) {
     .study-set-cards .card {
         width: 100%;
         margin: 15px 0;
     }
 }
 
-@media (min-width: 1700px) {
+@media (min-width: 1050px) {
     .study-set-cards .card {
         width: 30%;
         margin: (100% - (30% * 3)) / 6;

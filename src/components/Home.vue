@@ -2,15 +2,7 @@
     
     <div class="home">
         <!-- Search bar-->
-        <div class="search-box">
-            <a class="search-btn" href="#">
-                <i class="fas fa-search fa-lg"></i>
-            </a>
-            <input class="search-txt" type="text" name="" placeholder="Search">
-            <a class="caret-down-btn" href="#">
-                <i class="fas fa-caret-down fa-lg"></i>
-            </a>
-        </div>
+        <SearchBar />
 
         <!-- Home content -->
         <div id="welcome-box">
@@ -154,8 +146,13 @@
 </template>
 
 <script>
+import SearchBar from '@/components/SearchBar.vue'
+
 export default {
-    name: 'Home'
+    name: 'Home',
+    components: {
+        SearchBar
+    }
 }
 </script>
 
