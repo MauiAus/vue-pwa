@@ -29,10 +29,10 @@
         <div class="cards">
             <div class="card" id="math">
                 <div id="upper">
-                    <div id="section"><h2>A2</h2></div>
+                    <div id="section"><router-link id="studySet" to="/studySet"><h2>SCI</h2></router-link></div>
                     <div id="course">
-                        <a>MATH-4</a>
-                        <a>Algebra</a>
+                        <a>SCI-4</a>
+                        <a>Chemistry</a>
                     </div>
                 </div>
                 <p>You have accomplished 80% of this module. Keep up the good work!</p>
@@ -327,7 +327,7 @@ export default {
         #section { background: #f28d77 }
         
         &:hover {
-            background: #fc7d60;
+            background: #eb9481;
             transition: 0.2s;
         }
     }
