@@ -8,6 +8,18 @@
                 <img src="../assets/img/progress-icon.png"/>
             </div>
         </div>
+        <div id="topBox">
+            <div id = "gradeBox">
+                    <p id= "overview">Dashboard</p>
+                <div id="aveBar">
+                    <ve-bar 
+                        :data="chartData" 
+                        height="350px" 
+                        width="750px"
+                        >
+                    </ve-bar>
+                </div>
+            </div>
         </div>
         <div class="cards">
             <div class ="card">

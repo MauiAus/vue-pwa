@@ -86,7 +86,7 @@ export default {
         removeSet(){
             this.studySets.pop();
             this.delFlag = true;
-            for(var j = 0; j < i; j++){
+            for(var j = 0; j < this.studySets.length; j++){
                 console.log(this.studySets[j]);
             }
         },
