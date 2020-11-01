@@ -23,8 +23,8 @@
                         <h2>CH1</h2>
                     </div>
                     <div id = "details">
-                        <p>CHM-1</p>
-                        <p>Chemistry 1</p>
+                        <p>Chapter 1</p>
+                        <p>Introduction</p>
                     </div>
                     <div id = "open-btn">
                         <a href = "#"><i class="far fa-plus-square fa-2x"></i></a>
@@ -37,8 +37,8 @@
                         <h2>CH2</h2>
                     </div>
                     <div id = "details">
-                        <p>CHM-1</p>
-                        <p>Chemistry 1</p>
+                        <p>Chapter 2</p>
+                        <p>Molecules</p>
                     </div>
                     <div id = "open-btn">
                         <a href = "#"><i class="far fa-plus-square fa-2x"></i></a>
@@ -53,8 +53,8 @@
                             <h2>CH3</h2>
                         </div>
                         <div id = "details">
-                            <p>CHM-1</p>
-                            <p>Chemistry 1</p>
+                            <p>Chapter 3</p>
+                            <p>Periodic Ta...</p>
                         </div>
                         <div id = "open-btn">
                             <a href = "#"><i class="far fa-plus-square fa-2x"></i></a>
@@ -67,7 +67,7 @@
         <!--Course and more-->
         <div class="more">
             <div id="course">
-                SCI-4
+                MATH-4
             </div>
             <a id="more-btn" href="#">
                 More
@@ -83,8 +83,8 @@
                         <h2>CH1</h2>
                     </div>
                     <div id = "details">
-                        <p>CHM-1</p>
-                        <p>Chemistry 1</p>
+                        <p>Chapter 1</p>
+                        <p>Multiplication...</p>
                     </div>
                     <div id = "open-btn">
                         <a href = "#"><i class="far fa-plus-square fa-2x"></i></a>
@@ -97,8 +97,8 @@
                         <h2>CH2</h2>
                     </div>
                     <div id = "details">
-                        <p>CHM-1</p>
-                        <p>Chemistry 1</p>
+                        <p>Chapter 2</p>
+                        <p>Division...</p>
                     </div>
                     <div id = "open-btn">
                         <a href = "#"><i class="far fa-plus-square fa-2x"></i></a>
@@ -113,8 +113,8 @@
                             <h2>CH3</h2>
                         </div>
                         <div id = "details">
-                            <p>CHM-1</p>
-                            <p>Chemistry 1</p>
+                            <p>Chapter 3</p>
+                            <p>Using Frac...</p>
                         </div>
                         <div id = "open-btn">
                             <a href = "#"><i class="far fa-plus-square fa-2x"></i></a>
@@ -127,7 +127,7 @@
             <!--Course and more-->
         <div class="more">
             <div id="course">
-                SCI-4
+                CIV-4
             </div>
             <a id="more-btn" href="#">
                 More
@@ -143,8 +143,8 @@
                         <h2>CH1</h2>
                     </div>
                     <div id = "details">
-                        <p>CHM-1</p>
-                        <p>Chemistry 1</p>
+                        <p>Chapter 1</p>
+                        <p>The Spani...</p>
                     </div>
                     <div id = "open-btn">
                         <a href = "#"><i class="far fa-plus-square fa-2x"></i></a>
@@ -157,8 +157,8 @@
                         <h2>CH2</h2>
                     </div>
                     <div id = "details">
-                        <p>CHM-1</p>
-                        <p>Chemistry 1</p>
+                        <p>Chapter 2</p>
+                        <p>Trading wi...</p>
                     </div>
                     <div id = "open-btn">
                         <a href = "#"><i class="far fa-plus-square fa-2x"></i></a>
@@ -173,8 +173,8 @@
                             <h2>CH3</h2>
                         </div>
                         <div id = "details">
-                            <p>CHM-1</p>
-                            <p>Chemistry 1</p>
+                            <p>Chapter 3</p>
+                            <p>Blood Com...</p>
                         </div>
                         <div id = "open-btn">
                             <a href = "#"><i class="far fa-plus-square fa-2x"></i></a>
