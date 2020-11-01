@@ -85,9 +85,11 @@
                 </video>
                 </h1>
             </div>
-            <div id="configureBox">
-                    <i class="far fa-comments"></i>
-            </div>
+            <div id="comments">
+                    <div id="configureBox">
+                        <i class="far fa-comments"></i>
+                    </div>
+                </div>
         </div>
         <div class = "chapter-container">
             <div id = "chapter-header">
@@ -104,9 +106,11 @@
                     <a href = "#top" class = "button">Start Game!</a>
                 </h1>   
             </div>
-            <div id="configureBox">
-                    <i class="far fa-comments"></i>
-            </div>
+            <div id="comments">
+                    <div id="configureBox">
+                        <i class="far fa-comments"></i>
+                    </div>
+                </div>
         </div>
         <div class = "chapter-container">
             <div id = "chapter-header">
@@ -159,9 +163,11 @@
                 </test>
                 <test />
             </div>
-            <div id="configureBox">
-                    <i class="far fa-comments"></i>
-            </div>
+            <div id="comments">
+                    <div id="configureBox">
+                        <i class="far fa-comments"></i>
+                    </div>
+                </div>
         </div>
     </div>
     </div>
@@ -174,6 +180,11 @@ export default {
     name: 'studySet',
     components: {
         SearchBar
+    },
+    data(){
+        return{
+            commentBool:false,
+        }
     }
 }
 </script>
@@ -340,9 +351,7 @@ export default {
     border-radius: 0;
     border-width: 5px;
     display: flex;
-    background-color: yellowgreen;
     #configureBox{
-        background-color: red;
         margin-left:90%;
         i{
             padding:5%;
