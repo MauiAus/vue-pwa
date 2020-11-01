@@ -16,7 +16,7 @@
                 <input id="setdescBox" type ="text" placeholder="Add a description..." v-model="setDesc"/>
                 <p>DESCRIPTION</p>
             </div>
-            <p id="createBox">Create</p>
+            <router-link to="/sampleset"><p id="createBox">Create</p></router-link>
         </div>
         <div id="termView">
             <ul>

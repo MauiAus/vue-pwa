@@ -63,6 +63,11 @@
                     a glass fish bowl, the water would fill the container from the bottom up. If 
                     you did the same with gas, it would expand to fill every part of the glass fish 
                     bowl, not just the bottom.</p>
+                <div id="comments">
+                    <div id="configureBox">
+                        <i class="far fa-comments"></i>
+                    </div>
+                </div>
             </div>
         </div>
         <div class = "chapter-container">
@@ -80,6 +85,9 @@
                 </video>
                 </h1>
             </div>
+            <div id="configureBox">
+                    <i class="far fa-comments"></i>
+            </div>
         </div>
         <div class = "chapter-container">
             <div id = "chapter-header">
@@ -95,6 +103,9 @@
                     <img src = "../assets/img/game.jpg"><br>
                     <a href = "#top" class = "button">Start Game!</a>
                 </h1>   
+            </div>
+            <div id="configureBox">
+                    <i class="far fa-comments"></i>
             </div>
         </div>
         <div class = "chapter-container">
@@ -147,6 +158,9 @@
                 <h1 align = "center"><a href = "#top" class = "button">Submit answer</a></h1>
                 </test>
                 <test />
+            </div>
+            <div id="configureBox">
+                    <i class="far fa-comments"></i>
             </div>
         </div>
     </div>
@@ -257,11 +271,12 @@ export default {
 
 /* chapter containers */
 .chapter-container{
-    margin: 0% 2%;
+    margin: 3% 2%;
     background-color: #faf8f9;
     min-height: 50vh;
     border-radius: 12px;
     color: #59c998;
+    padding:5%;
     
         #chapter-header{
             margin: 2%;
@@ -318,6 +333,25 @@ export default {
             }
         }
 
+}
+
+#comments{
+    border-top: 2px solid  #7cc3c5;
+    border-radius: 0;
+    border-width: 5px;
+    display: flex;
+    background-color: yellowgreen;
+    #configureBox{
+        background-color: red;
+        margin-left:90%;
+        i{
+            padding:5%;
+            font-size: 30px;
+            &:hover {
+                color: #7cc3c5;
+            }
+        }
+    }
 }
 
 </style>

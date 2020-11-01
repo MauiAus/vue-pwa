@@ -50,6 +50,11 @@ const routes = [
         component: () => import('@/components/stats.vue'),
         meta: { title: 'Statistics'}
       },
+      {
+        path: 'sampleset',
+        component: () => import('@/components/sampleSet.vue'),
+        meta: { title: 'Sample Set'}
+      },
     ]
   }
 ]
