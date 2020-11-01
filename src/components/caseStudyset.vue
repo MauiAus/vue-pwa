@@ -21,31 +21,37 @@
         <div id="termView">
             <ul>
                 <li v-for="set in studySets" :key="set.index">
+                    <div v-if="set.toggleM">
                     <div id="container" @dragover.prevent="dragOver" @dragleave.prevent="dragLeave" @drop.prevent="drop($event)">
                         <h4>Drag and Drop image here</h4>
+                    </div>
                     </div>
                     <div id="bottomBox">
                     <div id="leftPart">
                         <p id="num">{{set.ind}}</p>
                         <div id="termBox">
+                            <div v-if="set.toggleH">
                             <input id="StermBox" v-if="!set.ibool" type ="text" placeholder="Enter term" v-model="tempTerm"/>
                             <input id="StermBox" v-if="set.ibool" type ="text" placeholder="Enter term" v-model="set.term"/>
                             <p>TITLE</p>
+                            </div>
+                            <div v-if="set.toggleD">
                             <input id="defBox" v-if="!set.ibool" type ="text" placeholder="Add definition" v-model="tempDef"/>
                             <input id="defBox" v-if="set.ibool" type ="text" placeholder="Add definition" v-model="set.desc"/>
                             <p>DEFINITION</p>
+                            </div>
                         </div>
                     </div>
                     <div id="rightPart">
                         <div id="iconSide">
                             <ul>
                                 <li>
-                                <i class="fas fa-heading"></i>
-                                <i class="fas fa-quote-right"></i>
+                                <i class="fas fa-heading" v-on:click="toggleHead(set.ind)"></i>
+                                <i class="fas fa-quote-right" v-on:click="toggleDef(set.ind)"></i>
                                 </li>
                                 <li>
-                                <i class="fas fa-photo-video" id="media"></i>
-                                <i class="fas fa-layer-group"></i>
+                                <i class="fas fa-photo-video" id="media" v-on:click="toggleMedia(set.ind)"></i>
+                                <i class="fas fa-layer-group" v-on:click="toggleGroup(set.ind)"></i>
                                 </li>
                                 <li>
                                 <i v-if="studySets.length > 1" class="fas fa-trash" v-on:click="removeSet()"></i>
@@ -72,26 +78,34 @@ export default {
             setDesc:"",
             tempTerm:"",
             tempDef:"",
+            tempH:"",
+            tempD:"",
+            tempG:"",
+            tempM:"",
             trueColor: '#111',
             delFlag:false,
             studySets:[
-                {term:"",desc:"",ibool:false,ind:1},
+                {term:"",desc:"",ibool:false,ind:1,toggleH:true,toggleD:true,toggleG:false,toggleM:false},
             ],
         }
     },
     methods:{
         addSet(){
             var i = this.studySets.length;
+            this.tempH=this.studySets[i-1].toggleH;
+            this.tempD=this.studySets[i-1].toggleD;
+            this.tempM=this.studySets[i-1].toggleM;
+            this.tempG=this.studySets[i-1].toggleG;
             if (!this.delFlag){
-                this.studySets[this.studySets.length-1] = {term:this.tempTerm,desc:this.tempDef,ibool:true,ind:i};
+                this.studySets[this.studySets.length-1] = {term:this.tempTerm,desc:this.tempDef,ibool:true,ind:i,toggleH:this.tempH,toggleD:this.tempD,toggleG:this.tempG,toggleM:this.tempM};
                 this.tempTerm = "";
                 this.tempDef = "";
-                this.studySets.push({term:this.tempTerm,desc:this.tempDef,ibool:false,ind:i+1});
+                this.studySets.push({term:this.tempTerm,desc:this.tempDef,ibool:false,ind:i+1,toggleH:true,toggleD:true,toggleG:false,toggleM:false});
             }
             else{
                 this.tempTerm = "";
                 this.tempDef = "";
-                this.studySets.push({term:this.tempTerm,desc:this.tempDef,ibool:false,ind:i+1});
+                this.studySets.push({term:this.tempTerm,desc:this.tempDef,ibool:false,ind:i+1,toggleH:true,toggleD:true,toggleG:false,toggleM:false});
                 this.delFlag = false;
             }
             for(var j = 0; j < i; j++){
@@ -105,13 +119,18 @@ export default {
                 console.log(this.studySets[j]);
             }
         },
-        addFile(e) {
-            let files = e.dataTransfer.files;
-            [...files].forEach(file => {
-            this.files.push(file);
-            console.log(this.files)
-        });
-    }
+        toggleHead(i){
+            this.studySets[i-1].toggleH = !this.studySets[i-1].toggleH;
+        },
+        toggleDef(i){
+            this.studySets[i-1].toggleD = !this.studySets[i-1].toggleD;
+        },
+        toggleMedia(i){
+            this.studySets[i-1].toggleM = !this.studySets[i-1].toggleM;
+        },
+        toggleGroup(i){
+            this.studySets[i-1].toggleG = !this.studySets[i-1].toggleG;
+        },
     }
 }
 </script>
