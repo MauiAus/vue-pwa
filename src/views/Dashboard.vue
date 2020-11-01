@@ -19,7 +19,7 @@
             <router-link id="link" to="/home"><i class="fas fa-home"></i></router-link>
             <router-link id="link" to="/library"><i class="fas fa-book-open"></i></router-link>
             <router-link id="link" to="/createStudyset"><i class="far fa-edit"></i></router-link>
-            <router-link id="link" to="/stats"><i class="fas fa-columns"></i></router-link>
+            <router-link id="link" to="/samplestats"><i class="fas fa-columns"></i></router-link>
             <a id="logout" href="#"><i class="fas fa-sign-out-alt"></i></a>
         </div>
 
@@ -38,7 +38,8 @@
                 </div>
             </div>
             <div id="reminderView">
-                <p>Reminders</p><i class="far fa-bell"></i>
+                <!--<router-link id="reminders" to="/reminders"><p>Reminders</p><i class="far fa-bell"></i>-->
+                <router-link id="reminders" to="/reminders"><p>Reminders</p></router-link><i class="far fa-bell"></i>
             </div>
             <div id="notificationView">
                 <ul>
@@ -230,6 +231,7 @@ export default {
             float:left;
             margin-top:9%;
             padding-left: 10%;
+            color: #111;
         }
         i{
             float:right;

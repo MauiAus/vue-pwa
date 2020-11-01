@@ -11,9 +11,9 @@
         </div>
         <div id="topBox">
             <div id="headerBox">
-                <input id="setnameBox" type ="text" :placeholder="setName" v-model="setName"/>
+                <input id="setnameBox" type ="text" placeholder="Enter a title like 'Intro to Biology'" v-model="setName"/>
                 <p>TITLE</p>
-                <input id="setdescBox" type ="text" :placeholder="setDesc" v-model="setDesc"/>
+                <input id="setdescBox" type ="text" placeholder="Add a description..." v-model="setDesc"/>
                 <p>DESCRIPTION</p>
             </div>
             <p id="createBox">Create</p>
@@ -21,19 +21,25 @@
         <div id="termView">
             <ul>
                 <li v-for="set in studySets" :key="set.index">
+                    <div id="container" @dragover.prevent="dragOver" @dragleave.prevent="dragLeave" @drop.prevent="drop($event)">
+                        <h4>Drag and Drop image here</h4>
+                    </div>
                     <div id="leftPart">
                         <p id="num">{{set.ind}}</p>
                         <div id="termBox">
-                            <input id="StermBox" type ="text" :placeholder="set.index" v-model="tempTerm"/>
+                            <input id="StermBox" v-if="!set.ibool" type ="text" placeholder="Enter term" v-model="tempTerm"/>
+                            <input id="StermBox" v-if="set.ibool" type ="text" placeholder="Enter term" v-model="set.term"/>
                             <p>TITLE</p>
-                            <input id="defBox" type ="text" :placeholder="tempDef" v-model="tempDef"/>
+                            <input id="defBox" v-if="!set.ibool" type ="text" placeholder="Add definition" v-model="tempDef"/>
+                            <input id="defBox" v-if="set.ibool" type ="text" placeholder="Add definition" v-model="set.desc"/>
                             <p>DEFINITION</p>
                         </div>
                     </div>
                     <div id="rightPart">
                         <div id="iconSide">
-                            <i class="fas fa-trash"></i>
-                            <i class="far fa-plus-square" v-on:click="addSet('','')"></i>
+                            <i v-if="studySets.length > 1" class="fas fa-trash" v-on:click="removeSet()"></i>
+                            <i class="far fa-plus-square" v-if="studySets.length > 1" v-on:click="addSet()"></i>
+                            <i class="far fa-plus-square" v-if="studySets.length <= 1" v-bind:style="{ padding: '5% 5% 5% 55%'}" v-on:click="addSet()"></i>
                         </div>
                     </div>
                 </li>
@@ -47,24 +53,50 @@ export default {
     name: 'caseStudyset',
     data(){
         return{
-            setName:"Enter a title like 'Intro to Biology'",
-            setDesc:"Add a description...",
-            tempTerm:"Enter term",
-            tempDef:"Add definition",
+            setName:"",
+            setDesc:"",
+            tempTerm:"",
+            tempDef:"",
+            trueColor: '#111',
+            delFlag:false,
             studySets:[
-                {term:"",desc:"",ind:1},
+                {term:"",desc:"",ibool:false,ind:1},
             ],
         }
     },
     methods:{
-        addSet(nterm,ndesc){
+        addSet(){
             var i = this.studySets.length;
-            this.studySets[this.studySets.length-1] = {term:this.tempTerm,desk:this.tempDef,ind:i};
-            this.studySets.push({term:nterm,desc:ndesc,ind:i+1});
+            if (!this.delFlag){
+                this.studySets[this.studySets.length-1] = {term:this.tempTerm,desc:this.tempDef,ibool:true,ind:i};
+                this.tempTerm = "";
+                this.tempDef = "";
+                this.studySets.push({term:this.tempTerm,desc:this.tempDef,ibool:false,ind:i+1});
+            }
+            else{
+                this.tempTerm = "";
+                this.tempDef = "";
+                this.studySets.push({term:this.tempTerm,desc:this.tempDef,ibool:false,ind:i+1});
+                this.delFlag = false;
+            }
+            for(var j = 0; j < i; j++){
+                console.log(this.studySets[j]);
+            }
         },
-        getIndex(){
-            return this.studySets.length-1
-        }
+        removeSet(){
+            this.studySets.pop();
+            this.delFlag = true;
+            for(var j = 0; j < i; j++){
+                console.log(this.studySets[j]);
+            }
+        },
+        addFile(e) {
+            let files = e.dataTransfer.files;
+            [...files].forEach(file => {
+            this.files.push(file);
+            console.log(this.files)
+        });
+    }
     }
 }
 </script>
@@ -139,7 +171,7 @@ export default {
             border-radius: 0;
             border-width: 5px;
             font-size: 20px;
-            color: #a5a5a5;
+            color: #111;
         }
         
         #setdescBox{
@@ -149,7 +181,7 @@ export default {
             border-radius: 0;
             border-width: 5px;
             font-size: 15px;
-            color: #a5a5a5;
+            color: #111;
         }
         p{
             margin-top: 0%;
@@ -213,7 +245,7 @@ export default {
                 border-radius: 0;
                 border-width: 5px;
                 font-size: 20px;
-                color: #a5a5a5;
+                color: #111;
                 width:70%;
             }
             #defBox{
@@ -223,7 +255,7 @@ export default {
                 border-radius: 0;
                 border-width: 5px;
                 font-size: 20px;
-                color: #a5a5a5;
+                color: #111;
                 width:70%;
             }
             p{
@@ -247,6 +279,17 @@ export default {
                 }
             }
         }
+    }
+}
+
+#container{
+    h4{
+        text-align: center;
+        font-family: sans-serif;
+        padding: 10%;
+        background-color: #b9e8d4;
+        border-radius: 10px;
+        color: white;
     }
 }
 
