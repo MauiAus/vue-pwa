@@ -265,7 +265,7 @@ export default {
     }
     #rightPart{
         float:left;
-        display:inline-block;
+        display:block;
         margin-left: 80%;
         #iconSide{
             display: flex;
