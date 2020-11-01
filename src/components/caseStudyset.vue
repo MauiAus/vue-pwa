@@ -24,6 +24,7 @@
                     <div id="container" @dragover.prevent="dragOver" @dragleave.prevent="dragLeave" @drop.prevent="drop($event)">
                         <h4>Drag and Drop image here</h4>
                     </div>
+                    <div id="bottomBox">
                     <div id="leftPart">
                         <p id="num">{{set.ind}}</p>
                         <div id="termBox">
@@ -37,11 +38,24 @@
                     </div>
                     <div id="rightPart">
                         <div id="iconSide">
-                            <i class="fas fa-heading"></i>
-                            <i v-if="studySets.length > 1" class="fas fa-trash" v-on:click="removeSet()"></i>
-                            <i class="far fa-plus-square" v-if="studySets.length > 1" v-on:click="addSet()"></i>
-                            <i class="far fa-plus-square" v-if="studySets.length <= 1" v-bind:style="{ padding: '5% 5% 5% 55%'}" v-on:click="addSet()"></i>
+                            <ul>
+                                <li>
+                                <i class="fas fa-heading"></i>
+                                <i class="fas fa-quote-right"></i>
+                                </li>
+                                <li>
+                                <i class="fas fa-photo-video" id="media"></i>
+                                <i class="fas fa-layer-group"></i>
+                                </li>
+                                <li>
+                                <i v-if="studySets.length > 1" class="fas fa-trash" v-on:click="removeSet()"></i>
+                                <i class="far fa-plus-square" v-if="studySets.length > 1" v-on:click="addSet()"></i>
+                                <i class="far fa-plus-square" v-if="studySets.length <= 1"  v-bind:style="{ padding: '5% 5% 5% 33%'}" v-on:click="addSet()"></i>
+                                </li>
+                            </ul>
+                            <!-- v-bind:style="{ padding: '5% 5% 5% 55%'}" -->
                         </div>
+                    </div>
                     </div>
                 </li>
             </ul>
@@ -221,8 +235,12 @@ export default {
         margin-top: 5%
     }
 
+    #bottomBox{
+        display:flex;
+    }
+
     #leftPart{
-        float:left;
+        width:85%;
         #num{
             float:left;
             font-weight: bold;
@@ -247,7 +265,7 @@ export default {
                 border-width: 5px;
                 font-size: 20px;
                 color: #111;
-                width:70%;
+                width:90%;
             }
             #defBox{
                 background: transparent;
@@ -257,7 +275,7 @@ export default {
                 border-width: 5px;
                 font-size: 20px;
                 color: #111;
-                width:70%;
+                width:90%;
             }
             p{
                 margin-top: 0;
@@ -265,19 +283,30 @@ export default {
         }
     }
     #rightPart{
-        float:left;
-        display:grid;
-        margin-left: 80%;
+        width:15%;
         #iconSide{
-            display: flex;
+            display: grid;
+            margin-top: 0%;
+            width:100%;
+            border-left: 2px solid #84ccc9;
+            border-radius: 0;
+            border-width: 5px;
+            li{
+                display:flex;
+                margin: 5% 5% 5%;
+                text-align: justify;
+            }
             i{
-                margin-left: 0;
-                padding:5% 15% 5%;
+                padding:5%;
                 font-size: 25px;
-
+                margin: 5% 5% 5%;
+                width:100%;
                 &:hover {
                 color:  #b9e8d4;
                 }
+            }
+            #media{
+                font-size: 22px;
             }
         }
     }
