@@ -7,15 +7,26 @@
             <p v-if="ctr==0">{{questions[0].question}}</p>
             <p v-if="ctr==1">{{questions[1].question}}</p>
             <p v-if="ctr==2">{{questions[2].question}}</p>
+            <p v-if="ctr==4">{{questions[2].question}}</p>
+            <p v-if="ctr==5">{{questions[3].question}}</p>
+            <p v-if="ctr==6">{{questions[1].question}}</p>
         </div>
         <div id="ansBox">
-            <ul v-if="ctr<3">
+            <ul v-if="ctr<3 || ctr>3 && ctr <7">
                 <li v-for="q in questions" :key="q.index">
                     <div id="ablock">
                     <p v-on:click="ctr+=1">{{q.ans}}</p>
                     </div>
                 </li>
             </ul>
+        </div>
+        <div id="intervalbox" v-if="ctr==3">
+            <p>You got 2 / 3 Right!</p>
+            <h1 v-on:click="ctr+=1">Continue</h1>
+        </div>
+        <div id="intervalbox" v-if="ctr==7">
+            <p>You got 3 / 3 Right!</p>
+            <h1 v-on:click="ctr+=1">Return to Module</h1>
         </div>
     </div>
     </div>
@@ -37,7 +48,7 @@ export default {
             ],
             ctr:0,
         }
-    }
+    },
 }
 </script>
 
@@ -59,6 +70,14 @@ export default {
         }
         li{
         &:hover{
+            color: #b9e8d4;
+        }   
+        }
+    }
+
+    #intervalbox{
+        h1{
+                &:hover{
             color: #b9e8d4;
         }   
         }

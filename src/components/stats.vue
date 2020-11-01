@@ -81,7 +81,29 @@ export default {
                     {'subject': 'Geology 1', 'Average Percentage of Scores': 90 }
                 ]
             },
+            studchartData: {
+                columns: ['subject', 'Average Percentage of Student Scores'],
+                rows: [
+                    {'subject': 'English 3', 'Average Percentage of Scores': 70 },
+                    {'subject': 'Algebra 2', 'Average Percentage of Scores': 80 },
+                    {'subject': 'Arts 1', 'Average Percentage of Scores': 85 },
+                    {'subject': 'Science 1', 'Average Percentage of Scores': 75 },
+                    {'subject': 'Geology 1', 'Average Percentage of Scores': 90 }
+                ]
+            },
             scienceData:{
+                columns: ['Test', 'Score Percentage'],
+                rows: [
+                    {'Test': 'Quiz 1', 'Score Percentage': 69},
+                    {'Test': 'Quiz 2', 'Score Percentage': 80},
+                    {'Test': 'Quiz 3', 'Score Percentage': 65},
+                    {'Test': 'Seatwork 1', 'Score Percentage': 74},
+                    {'Test': 'Seatwork 2', 'Score Percentage': 69},
+                    {'Test': 'Homework 1', 'Score Percentage': 57},
+                    {'Test': 'Homework2 ', 'Score Percentage': 76}
+                ]
+            },
+            studentData:{
                 columns: ['Test', 'Score Percentage'],
                 rows: [
                     {'Test': 'Quiz 1', 'Score Percentage': 69},
