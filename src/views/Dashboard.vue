@@ -63,9 +63,9 @@ export default {
             name:"Juan Dela Cruz",
             status:"Student",
             reminders:[
-              {course:"Biology", notification:"Send homework", date:"28 Dec 2020, Friday"},
-              {course:"Algebra", notification:"Send homework", date:"28 Dec 2020, Friday"},
-              {course:"Grammar", notification:"Send homework", date:"28 Dec 2020, Friday"},
+              {course:"Biology", notification:"Send homework", date:"1 Nov, Sunday"},
+              {course:"Algebra", notification:"Send homework", date:"1 Nov, Sunday"},
+              {course:"Grammar", notification:"Send homework", date:"1 Nov, Sunday"},
             ],
         }
     },

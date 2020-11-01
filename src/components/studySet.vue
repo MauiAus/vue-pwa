@@ -72,6 +72,27 @@
         </div>
         <div class = "chapter-container">
             <div id = "chapter-header">
+                <a name = "first"></a>
+                <h2>3.1</h2>
+                <p> States of Matter</p>
+                <a href = "#top">Back to Top</a>
+                <hr>
+            </div>
+            <div class = "chapter-content">
+                <div id="learn">
+                    <h1>States of Matter    <p>3 Terms</p></h1>
+                    <router-link to="/sampletest"><h2>Click to Learn!</h2></router-link>
+
+                </div>
+                <div id="comments">
+                    <div id="configureBox">
+                        <i class="far fa-comments"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "chapter-container">
+            <div id = "chapter-header">
                 <a name = "second"></a>
                 <h2>3.2</h2>
                 <p> Video Lesson - Properties of Matter</p>
@@ -360,6 +381,20 @@ export default {
                 color: #7cc3c5;
             }
         }
+    }
+}
+
+#learn{
+    text-align: center;
+    padding:5%;
+    margin-top: 0;
+    h2{
+        padding:3%;
+        border-radius: 10px;
+        background-color: #b9e8d4;
+        &:hover {
+                color: #7cc3c5;
+            }
     }
 }
 
