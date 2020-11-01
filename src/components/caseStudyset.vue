@@ -37,6 +37,7 @@
                     </div>
                     <div id="rightPart">
                         <div id="iconSide">
+                            <i class="fas fa-heading"></i>
                             <i v-if="studySets.length > 1" class="fas fa-trash" v-on:click="removeSet()"></i>
                             <i class="far fa-plus-square" v-if="studySets.length > 1" v-on:click="addSet()"></i>
                             <i class="far fa-plus-square" v-if="studySets.length <= 1" v-bind:style="{ padding: '5% 5% 5% 55%'}" v-on:click="addSet()"></i>
@@ -265,7 +266,7 @@ export default {
     }
     #rightPart{
         float:left;
-        display:inline-block;
+        display:grid;
         margin-left: 80%;
         #iconSide{
             display: flex;
