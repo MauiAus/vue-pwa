@@ -134,6 +134,13 @@ export default {
                 {course:"ALG-2",desc:"Math: Intermediate Algebra"},
                 {course:"ENG-3",desc:"Communication Fundamentals"},
             ],
+            studentList:[
+                {course:"Juan Two",desc:"GEO-1"},
+                {course:"Juan Three",desc:"GEO-1"},
+                {course:"Juan Four",desc:"GEO-1"},
+                {course:"Juan Five",desc:"GEO-1"},
+                {course:"Juan Six",desc:"GEO-1"},
+            ],
             sciSel:true,
             geoSel:false,
         }

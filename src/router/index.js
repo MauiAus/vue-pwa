@@ -60,6 +60,11 @@ const routes = [
         component: () => import('@/components/sampleLearn.vue'),
         meta: { title: 'Sample Test'}
       },
+      {
+        path: 'teacher',
+        component: () => import('@/components/profProfile.vue'),
+        meta: { title: 'profprofile'}
+      },
     ]
   }
 ]
